@@ -1,81 +1,138 @@
-.dash-product{
+.dash-product {
     background-color: $whitesmoke ;
     padding: 10px;
-    .search{
-        .btn-qrCode{
+
+    .search {
+        display: flex;
+        justify-content: space-evenly;
+
+        .btn-qrCode {
             background-color: $maincolor;
-            svg{
-                fill:$white;
+            margin: 0 0.5rem;
+
+            svg {
+                fill: $white;
                 font-size: 35px !important;
             }
-            &:hover{
-                background-color: $secandColor;    
-            }   
-        }
-        .form-search {
 
-            input{
+            &:hover {
+                background-color: $secandColor;
+            }
+        }
+
+        .form-search {
+            display: flex;
+            width: 100%;
+
+            input {
                 border: 1px solid $maincolor;
-                &:focus{
+
+                &:focus {
                     border-color: $maincolor !important;
-                    box-shadow:  $secandShadow;
+                    box-shadow: $secandShadow;
                 }
             }
-           
-            button{
+
+            button {
                 border: 1px solid $maincolor;
                 background-color: $maincolor;
                 color: $white;
-                &:hover{
+
+                &:hover {
                     background-color: $secandColor;
                 }
             }
         }
-        select{
+
+        .select-Depot {
+            width: 50%;
+            margin: 0 0.1rem;
             border: 1px solid $maincolor !important;
             border-radius: 5px;
-            &:focus ,&:active {
+
+            &:focus,
+            &:active {
                 border-color: $maincolor !important;
-                box-shadow:  $secandShadow;
+                box-shadow: $secandShadow;
+            }
+        }
+
+        @media (max-width :500px) {
+            .select-Depot {
+                width: 95%;
+                margin: 8px 0.5rem;
             }
         }
     }
-   
-    nav{
-        
-        .nav-link{
+
+    nav {
+        .nav-link {
             color: $maincolor;
-            border-bottom: 1px solid;  
-            &:hover{
+            border-bottom: 1px solid;
+
+            &:hover {
                 border-color: $maincolor;
                 background-color: $maincolor;
                 color: $white;
             }
         }
-        .nav-link.active{
+
+        .nav-link.active {
             border-bottom: 0px;
             border-color: $maincolor;
         }
     }
-    .filter-categories{
+
+    .filter-categories {
         margin: 15px auto;
-        .btn-categories{
+        .btn-categories {
             border: 1px solid $gray;
             background-color: $gray;
             margin: 0 6px;
-            padding:8px 15px;
+            padding: 8px 15px;
             width: 80px;
-            &:hover ,:active{
+
+            &:hover,
+            :active {
                 background-color: $maincolor;
                 color: $white;
             }
         }
     }
-    .all-product{
+
+    .all-product {
         margin: 5px auto;
-        .col-md-3{
+
+        .col-md-3 {
             width: 23% !important;
+        }
+
+        @media (max-width:500px) {
+            .col-md-3 {
+                width: 100% !important;
+            }
+        }
+    }
+
+    .pagination-prodact{
+        display: flex;
+        justify-content: end;
+        margin: 0.9rem 0 0;
+        li{
+          a{
+            color: $maincolor;
+            font-size: 20px;
+            &:hover {
+                font-size: 25px;
+                color: $white;
+                background-color: $secandColor !important;
+            }
+          }
+        }
+
+        @media (max-width:500px) {
+            justify-content: center !important;
+
         }
     }
 }
-  

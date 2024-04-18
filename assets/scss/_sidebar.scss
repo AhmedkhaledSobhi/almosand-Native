@@ -1,45 +1,78 @@
 .sidebar {
-    height: 100vh !important;
+    // height: 100 !important;
     width: 100%;
     position: relative;
     top: 0;
     left: 0;
-    ul {
+
+    .menu-list {
         list-style-type: none;
         padding: 0;
-        li {
+
+
+        .menu-item {
+            flex: 0 0 calc(33.33% - 20px);
+            /* Set flex basis to 33.33% with margin */
+            margin: 0 10px 10px 0;
+            /* Adjust margin as needed */
+
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 3px;
-            margin: 10px 5px ;
+            margin: 10px 5px;
             border-radius: 12px;
             height: 70px;
             transition: all 0.5s ease-in-out;
             background-color: $gray;
+
             a {
                 color: $maincolor;
                 text-decoration: none;
                 transition: all 0.9s ease-in-out;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
             }
-            svg{
-                fill:$maincolor ;
+            svg {
+                fill: $maincolor ;
             }
-            &.active{
+            &.active {
                 background-color: $maincolor;
-                a{
+                a {
                     color: $white;
                 }
-                svg{
-                    fill:$white !important;
+                svg {
+                    fill: $white !important;
                 }
             }
+
             &:hover {
                 background-color: $maincolor;
-                a{
+                a {
                     color: $white;
                 }
-                svg{
-                    fill:$white !important;
+                svg {
+                    fill: $white !important;
                 }
             }
+        }
+    }
+
+    /* Media Query for Mobile */
+    @media (max-width: 767px) {
+        .menu-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .menu-item {
+            flex-basis: calc(50% - 20px);
+            /* Set flex basis to 50% for two items per row */
         }
     }
 }

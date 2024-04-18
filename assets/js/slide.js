@@ -1,5 +1,12 @@
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 11,
+let initialSlidesPerView = 11;
+
+if (window.innerWidth < 768) {
+    // Change slides per view for smaller screens
+    initialSlidesPerView = 3; 
+}
+
+const swiper = new Swiper(".mySwiper", {
+    slidesPerView: initialSlidesPerView,
     spaceBetween: 5,
     freeMode: true,
     pagination: {
@@ -7,3 +14,6 @@ var swiper = new Swiper(".mySwiper", {
         clickable: true,
     },
 });
+
+
+

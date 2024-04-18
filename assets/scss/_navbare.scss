@@ -5,6 +5,15 @@
     left: 0;
     right: 0;
     z-index: 999;
+    .navbar-toggler{
+        border-color: $maincolor;
+        &:focus {
+        box-shadow: $secandShadow !important;
+        }
+    }
+   .navbar-collapse{
+    padding: 5px;
+   }
     .form-user {
         width: 20rem;
         .icon-notfic{
