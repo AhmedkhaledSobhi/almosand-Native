@@ -1,29 +1,23 @@
 .dash-product {
     background-color: $whitesmoke ;
     padding: 10px;
-
     .search {
         display: flex;
         justify-content: space-evenly;
-
         .btn-qrCode {
             background-color: $maincolor;
             margin: 0 0.5rem;
-
             svg {
                 fill: $white;
                 font-size: 35px !important;
             }
-
             &:hover {
                 background-color: $secandColor;
             }
         }
-
         .form-search {
             display: flex;
             width: 100%;
-
             input {
                 border: 1px solid $maincolor;
 
@@ -49,7 +43,6 @@
             margin: 0 0.1rem;
             border: 1px solid $maincolor !important;
             border-radius: 5px;
-
             &:focus,
             &:active {
                 border-color: $maincolor !important;
@@ -132,7 +125,6 @@
 
         @media (max-width:500px) {
             justify-content: center !important;
-
         }
     }
 }
