@@ -1,0 +1,61 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    .form-user {
+        width: 20rem;
+        .icon-notfic{
+            padding: 5px 10px;
+            border: 2px solid $gray;
+            border-radius: 15px;
+            transition: all 1s;
+            &:hover{
+                background-color: $gray;
+                border-color: $maincolor;
+            }
+        }
+        .input-lang {
+            border: 0px;
+            background-color: transparent;
+            outline: none;
+            &:focus{
+                border-color: $maincolor;
+                border-radius: 3px;
+                box-shadow: $secandShadow;
+            }
+        }
+        .account {
+            .btn-user {
+                width: 9rem !important;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border: 0px;
+                border-radius: 10% !important;
+                &:focus{
+                    border-color: $maincolor;
+                    border-radius: 3px;
+                    box-shadow: $secandShadow;
+                }
+                .afatar-img {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    border: 1px solid;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+}

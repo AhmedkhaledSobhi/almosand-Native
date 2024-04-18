@@ -1,0 +1,81 @@
+.dash-product{
+    background-color: $whitesmoke ;
+    padding: 10px;
+    .search{
+        .btn-qrCode{
+            background-color: $maincolor;
+            svg{
+                fill:$white;
+                font-size: 35px !important;
+            }
+            &:hover{
+                background-color: $secandColor;    
+            }   
+        }
+        .form-search {
+
+            input{
+                border: 1px solid $maincolor;
+                &:focus{
+                    border-color: $maincolor !important;
+                    box-shadow:  $secandShadow;
+                }
+            }
+           
+            button{
+                border: 1px solid $maincolor;
+                background-color: $maincolor;
+                color: $white;
+                &:hover{
+                    background-color: $secandColor;
+                }
+            }
+        }
+        select{
+            border: 1px solid $maincolor !important;
+            border-radius: 5px;
+            &:focus ,&:active {
+                border-color: $maincolor !important;
+                box-shadow:  $secandShadow;
+            }
+        }
+    }
+   
+    nav{
+        
+        .nav-link{
+            color: $maincolor;
+            border-bottom: 1px solid;  
+            &:hover{
+                border-color: $maincolor;
+                background-color: $maincolor;
+                color: $white;
+            }
+        }
+        .nav-link.active{
+            border-bottom: 0px;
+            border-color: $maincolor;
+        }
+    }
+    .filter-categories{
+        margin: 15px auto;
+        .btn-categories{
+            border: 1px solid $gray;
+            background-color: $gray;
+            margin: 0 6px;
+            padding:8px 15px;
+            width: 80px;
+            &:hover ,:active{
+                background-color: $maincolor;
+                color: $white;
+            }
+        }
+    }
+    .all-product{
+        margin: 5px auto;
+        .col-md-3{
+            width: 23% !important;
+        }
+    }
+}
+  
