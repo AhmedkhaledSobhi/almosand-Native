@@ -1,6 +1,7 @@
 .dash-product {
     background-color: $whitesmoke ;
     padding: 10px;
+
     .search {
         display: flex;
         justify-content: space-evenly;
@@ -15,12 +16,12 @@
                 background-color: $secandColor;
             }
         }
+
         .form-search {
             display: flex;
             width: 100%;
             input {
                 border: 1px solid $maincolor;
-
                 &:focus {
                     border-color: $maincolor !important;
                     box-shadow: $secandShadow;
@@ -31,7 +32,6 @@
                 border: 1px solid $maincolor;
                 background-color: $maincolor;
                 color: $white;
-
                 &:hover {
                     background-color: $secandColor;
                 }
@@ -62,7 +62,6 @@
         .nav-link {
             color: $maincolor;
             border-bottom: 1px solid;
-
             &:hover {
                 border-color: $maincolor;
                 background-color: $maincolor;
@@ -84,7 +83,6 @@
             margin: 0 6px;
             padding: 8px 15px;
             width: 80px;
-
             &:hover,
             :active {
                 background-color: $maincolor;
@@ -95,36 +93,63 @@
 
     .all-product {
         margin: 5px auto;
-
         .col-md-3 {
             width: 23% !important;
+            a {
+                width: 2.2rem;
+                height:2.2rem;
+                border: 0.5px solid $maincolor ;
+                background-color: $gray;
+                border-radius: 20%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                transition: all 1s;
+                i {
+                    font-size: 18px;
+                    color: $maincolor;
+                    transition: all 1s;
+                }
+                &:hover{
+                    background-color: $maincolor;
+                    i{
+                        color: $white !important;
+                    }
+                }
+            }
         }
 
         @media (max-width:500px) {
             .col-md-3 {
                 width: 100% !important;
             }
+         
         }
     }
 
-    .pagination-prodact{
+    .pagination-prodact {
         display: flex;
         justify-content: end;
         margin: 0.9rem 0 0;
-        li{
-          a{
-            color: $maincolor;
-            font-size: 20px;
-            &:hover {
-                font-size: 25px;
-                color: $white;
-                background-color: $secandColor !important;
+
+        li {
+            a {
+                color: $maincolor;
+                font-size: 20px;
+
+                &:hover {
+                    font-size: 25px;
+                    color: $white;
+                    background-color: $secandColor !important;
+                }
             }
-          }
         }
 
         @media (max-width:500px) {
             justify-content: center !important;
         }
     }
+
+  
 }

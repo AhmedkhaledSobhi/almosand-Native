@@ -15,5 +15,19 @@ const swiper = new Swiper(".mySwiper", {
     },
 });
 
+// document.getElementById("closeCart")
 
+
+document.getElementById("hideButton").addEventListener("click", function() {
+    // Hide the item when the hide button is clicked
+    document.getElementById("item-to-hide").style.display = "none";
+    document.querySelector('body').style.overflow = 'auto';
+
+});
+
+document.getElementById("showButton").addEventListener("click", function() {
+    // Show the item when the show button is clicked
+    document.getElementById("item-to-hide").style.display = "block";
+    document.querySelector('body').style.overflow = 'hidden';
+});
 
