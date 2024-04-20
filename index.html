@@ -175,10 +175,7 @@
 
             <!-- ------------ payment products cart ------------------------ -->
             <div class="col-md-3 Shopping-cart-box" id="item-to-hide">
-                <button id="hideButton" class="btn-close-cart d-none">
-                    <Span>اغلاق</Span>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </button>
+                
                 <!-- ------------------------------------- -->
                 <div class="products-cart p-3">
                     <div class="">
@@ -407,11 +404,18 @@
                             <option value="2">Two</option>
                             <option value="3">Three</option>
                         </select>
-                        <button id="showButton" class="btn-open-cart d-none">
-                            <Span>افتح</Span>
-                            <small>(1)</small>
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
+                        <div class="btn-layer">
+                            <button id="showButton" class="btn-open-cart d-no ">
+                                <!-- <Span>افتح</Span> -->
+                                <i class="fa-solid fa-cart-shopping "></i>
+                                <small class="d-inline">(1)</small>
+                            </button>
+
+                            <button id="hideButton" class="btn-close-cart ">
+                                <Span>اغلاق</Span>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <nav>

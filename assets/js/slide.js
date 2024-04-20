@@ -21,11 +21,15 @@ const swiper = new Swiper(".mySwiper", {
 document.getElementById("hideButton").addEventListener("click", function() {
     document.getElementById("item-to-hide").style.display = "none";
     document.querySelector('body').style.overflow = 'auto';
-
+    document.getElementById("hideButton").style.display ="none";
+    document.getElementById("showButton").style.display ="flex";
 });
 
 document.getElementById("showButton").addEventListener("click", function() {
     document.getElementById("item-to-hide").style.display = "block";
     document.querySelector('body').style.overflow = 'hidden';
+    document.getElementById("hideButton").style.display ="flex";
+    document.getElementById("showButton").style.display ="none";
+
 });
 
