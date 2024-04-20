@@ -93,7 +93,6 @@
     {
         border-left: 0px;
         border-right: 0px;
-      
         .sec-payment{
             .row{
                 .col-md-9{
@@ -113,19 +112,14 @@
                         padding: 8px 10px;
                     }
                 }
-            
             }
-
-            
         }
     }
 }
 
 
+
 @media (max-width: 768px) {
-    body{
-        // overflow: hidden;
-    }
     .Shopping-cart-box{
         display: none;
         background-color: $gray;
@@ -139,7 +133,6 @@
     }
 
     .btn-open-cart{
-
         display: block !important;
         border:  1px solid  $maincolor; 
         border-radius: 8px;
@@ -148,7 +141,6 @@
         &:hover{
             background-color: $maincolor;
             color: $white;
-
         }
     }
     .btn-close-cart{
