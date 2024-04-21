@@ -25,6 +25,18 @@ body {
   line-height: 28px;
 }
 
+.btns {
+  margin: 0 10px;
+  padding: 0.2rem 0.5rem 0.3rem;
+  border: 0.5px solid #00ced2;
+  border-radius: 7px;
+  transition: all 1s;
+}
+.btns:hover {
+  background-color: #00ced2;
+  color: #FFF;
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -618,6 +630,10 @@ h6 {
     background-color: #00ced2;
     color: #FFF;
   }
+}
+.Customer table {
+  --bs-border-opacity: 2 !important;
+  border-color: #00ced2 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
