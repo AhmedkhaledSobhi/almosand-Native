@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer management</title>
+    <title>Point of sale invoice</title>
     <!-- --------------------- this is fonts --------------------------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +16,7 @@
     <!-- ----------------- this is file style ---------------------- -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary   ">
         <div class="container-fluid">
             <a class="navbar-brand">
@@ -82,7 +79,7 @@
 
     <section class="container-fluid pt-5 mt-5  ">
         <div class="row">
-            <!-- ------------------ Control interface system elements --------------------- -->
+            <!-- ------------ Control interface system elements --------------------- -->
             <div class="col-md-1">
                 <div class="">
                     <div class="sidebar ">
@@ -169,103 +166,136 @@
                 </div>
             </div>
 
-            <!-- ----------------------------- customer managment ------------------------  -->
+            <!-- ------------------------ Point of sale invoice --------------------------- -->
             <div class="col-md-11">
-                <div class="container-fluid Customer">
+                <div class="container-fluid point-sale">
                     <div class=" d-flex align-items-center justify-content-between my-4">
-                        <h6>ادارة الزبائن</h6>
+                        <h6> فاتورة نقاط البيع </h6>
                         <button class="btns">انشاء <i class="fa-solid fa-plus"></i></button>
                     </div>
 
-                    <div class="body-Customer bg-light py-4 ">
-                        <div class="search-Customer">
-                           
+                    <div class="body-point-sale  bg-light py-4">
+                        <div class="date-point-sale ">
+                            <h6>تاريخ البحث بين</h6>
+                            <div class="xx d-flex justify-content-between w-50 mx-5">
+                                <input class="w-100 mx-2 px-2" type="date" name="" id="">
+                                <input class="w-100 mx-2 px-2" type="date" name="" id="">
+                                <button class="btns">بحث</button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="search-point-sale  ">
                             <div class="d-flex">
-                                <label for="">ابحث</label>
-                                <input class="text-center mx-3" type="text">
+                                <label for="search">ابحث</label>
+                                <input class="text-center mx-3" type="text" name="" id="search">
                             </div>
     
-                            <div class="d-flex g-danger">
+                            <div class="d-flex">
                                 <label for="">اظهر</label>
                                 <input class="text-center mx-3 w-25" type="number" name="" id="" value="10">
                                 <small>مدخلات</small>
                             </div>
-                            
                         </div>
     
                         <div class="table-responsive">
                             <table class="table table-bordered table-striped table-hover text-center">
                                 <thead>
                                     <tr>
-                                        <th scope="col"> # </th>
-                                        <th scope="col"> صورة </th>
-                                        <th scope="col"> اسم </th>
-                                        <th scope="col"> شركة </th>   
-                                        <th scope="col"> البريد الاكتروني </th>
-                                        <th scope="col"> هاتف </th>   
-                                        <th scope="col"> عنوان </th>
-                                        <th scope="col"> مجموعة العملاء </th>
-                                        <th scope="col"> نشط </th>
-                                        <th scope="col"> أجراءات </th>
+                                        <th scope="col"> 
+                                            <small class="text-muted"> 
+                                                <i class="fa-solid fa-arrow-down-up-across-line "></i>
+                                            </small>
+                                            #
+                                        </th>
+                                        <th scope="col">
+                                            <small class="text-muted"> 
+                                                <i class="fa-solid fa-arrow-down-up-across-line "></i>
+                                            </small>
+                                            فاتورة #POS 
+                                        </th>
+                                        <th scope="col"> 
+                                            <small class="text-muted"> 
+                                                <i class="fa-solid fa-arrow-down-up-across-line "></i>
+                                            </small>
+                                            الزبون
+                                        </th>
+                                        <th scope="col"> 
+                                            <small class="text-muted"> 
+                                                <i class="fa-solid fa-arrow-down-up-across-line "></i>
+                                            </small>
+                                            تاريخ الفاتورة    
+                                        </th>   
+                                        <th scope="col"> 
+                                            <small class="text-muted"> 
+                                                <i class="fa-solid fa-arrow-down-up-across-line "></i>
+                                            </small>
+                                            الاجمالي    
+                                        </th>
+                                        <th scope="col"> 
+                                            <small class="text-muted"> 
+                                                <i class="fa-solid fa-arrow-down-up-across-line "></i>
+                                            </small>
+                                            الحالة    
+                                        </th>   
+                                        <th scope="col"> 
+                                            <small class="text-muted"> 
+                                                <i class="fa-solid fa-arrow-down-up-across-line "></i>
+                                            </small>
+                                            تاريخ استحقاق الفاتورة    
+                                        </th>
+                                        <th scope="col"> اجراءات </th>
+                                        <!-- <th scope="col"> نشط </th>
+                                        <th scope="col"> أجراءات </th> -->
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th>1</th>
                                         <td>
-                                            <img src="assets/image/1705773129ض.png" alt="">
-                                        </td>
-                                        <td>احمد</td>
-                                        <td>تكنو</td>
-                                        <td>info@almosand.com</td>
-                                        <td>0100555484521</td>
-                                        <td> menoufia</td>
-                                        <td>
-                                            <a><i class="fa-solid fa-download"></i></a>
+                                           2
                                         </td>
                                         <td>
-                                            <a><i class="fa-solid fa-square-check"></i></a>
+                                            <i class="fa-solid fa-eye"></i>
+                                            walk in 
                                         </td>
+                                        <td>21-11-2023</td>
+                                        <td>$115.00</td>
+                                        <td>دفع</td>
+                                        <td> 21-11-2023</td>
                                         <td>
                                             <a><i class="fa-solid fa-eye"></i></a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>2</th>
+                                        <th>1</th>
                                         <td>
-                                            <img src="assets/image/1705773129ض.png" alt="">
-                                        </td>
-                                        <td>احمد</td>
-                                        <td>تكنو</td>
-                                        <td>info@almosand.com</td>
-                                        <td>0100555484521</td>
-                                        <td> menoufia</td>
-                                        <td>
-                                            <a><i class="fa-solid fa-download"></i></a>
+                                           2
                                         </td>
                                         <td>
-                                            <a><i class="fa-solid fa-square-check"></i></a>
+                                            <i class="fa-solid fa-eye"></i>
+                                            walk in 
                                         </td>
+                                        <td>21-11-2023</td>
+                                        <td>$115.00</td>
+                                        <td>دفع</td>
+                                        <td> 21-11-2023</td>
                                         <td>
                                             <a><i class="fa-solid fa-eye"></i></a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>3</th>
+                                        <th>1</th>
                                         <td>
-                                            <img src="assets/image/1705773129ض.png" alt="">
-                                        </td>
-                                        <td>احمد</td>
-                                        <td>تكنو</td>
-                                        <td>info@almosand.com</td>
-                                        <td>0100555484521</td>
-                                        <td> menoufia</td>
-                                        <td>
-                                            <a><i class="fa-solid fa-download"></i></a>
+                                           2
                                         </td>
                                         <td>
-                                            <a><i class="fa-solid fa-square-check"></i></a>
+                                            <i class="fa-solid fa-eye"></i>
+                                            walk in 
                                         </td>
+                                        <td>21-11-2023</td>
+                                        <td>$115.00</td>
+                                        <td> <div></div> دفع</td>
+                                        <td> 21-11-2023</td>
                                         <td>
                                             <a><i class="fa-solid fa-eye"></i></a>
                                         </td>
@@ -275,7 +305,7 @@
                             </table>
                         </div>
     
-                        <div class="d-flex justify-content-between align-items-center ">
+                        <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <p> اظهار <span> 1 </span> الي <span> 3 </span> من اصل <span> 3 </span> مدخل </p>
                             </div>
@@ -298,7 +328,8 @@
     </section>
 
 
+
+
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

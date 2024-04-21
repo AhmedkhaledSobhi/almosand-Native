@@ -1,6 +1,33 @@
 .Customer{
-    table{
-        --bs-border-opacity: 2 !important;
-        border-color: $maincolor !important ;
+
+    @media (max-width : 768px) {
+        padding: 3px;
+    }
+
+    .body-Customer {
+        border-radius: 10px;
+        padding: 0.2rem 0.55rem;
+        .search-Customer {
+            display: flex;
+            margin: 0 0.9rem 1rem;
+            @media (max-width : 768px) {
+                :nth-child(1) {
+                    input {
+                        width: 100%;
+                        margin: 0px 0px 10px;
+                    }
+                }
+                width: 100%;
+                flex-direction: column;
+            }
+        }
+        table {
+            --bs-border-opacity: 2 !important;
+            border-color: $maincolor !important;
+            @media (max-width :768px) {
+                margin: 0 10px;
+            }
+        }
+   
     }
 }

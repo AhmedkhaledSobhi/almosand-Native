@@ -1,0 +1,58 @@
+.point-sale {
+    @media (max-width : 768px) {
+        padding: 3px;
+    }
+
+    .body-point-sale {
+        border-radius: 10px;
+        padding: 0.2rem 0.55rem;
+        // &:first-child
+        .date-point-sale{
+            display: flex;
+            @media (max-width :768px) {
+                flex-direction: column;
+                .xx{
+                    flex-direction: column;
+                    width: 100% !important;
+                    margin: 0px !important;
+                    input{
+                        margin:5px 1px !important;
+                    }
+                    .btns{
+                        width: 100%;
+                        margin: 5px auto;
+                    }
+                }
+            }
+        
+            
+        }
+        .search-point-sale {
+            display: flex;
+            margin: 0 0.9rem 1rem;
+            @media (max-width : 768px) {
+                :nth-child(1) {
+                    input {
+                        width: 100%;
+                        margin: 0px 0px 10px;
+                    }
+                }
+                width: 100%;
+                flex-direction: column;
+            }
+        }
+        table {
+            --bs-border-opacity: 2 !important;
+            border-color: $maincolor !important;
+            @media (max-width :768px) {
+                margin: 0 10px;
+            }
+        }
+   
+    }
+    // :last-child{
+    //     @media (max-width :768px) {
+    //         flex-direction: column;
+    //     }
+    // }
+}
