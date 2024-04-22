@@ -47,6 +47,32 @@
             @media (max-width :768px) {
                 margin: 0 10px;
             }
+            .condition1{
+                background-color: #98DB4B;
+                padding: 2px 7%;
+                border-radius: 10px;
+            }
+            .condition2{
+               background-color : #5EA4EB;
+                padding: 2px 8%;
+                border-radius: 10px;
+                @media (max-width:768px) {
+                    display: flex;
+                    flex-direction: column;
+                    width: 50px;
+                }
+            }
+            .Preview{
+                background-color : #A200ff;
+                color: $white;
+                padding: 2px 10%;
+                border-radius: 50%;
+                @media (max-width:768px) {
+                    width: 50px;
+                    padding: 2px 15%;
+                }
+            }
+
         }
    
     }
