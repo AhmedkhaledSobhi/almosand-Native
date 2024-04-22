@@ -717,4 +717,57 @@ h6 {
   }
 }
 
+@media (max-width: 768px) {
+  .Quotations {
+    padding: 3px;
+  }
+}
+.Quotations .body-Quotations {
+  border-radius: 10px;
+  padding: 0.2rem 0.55rem;
+}
+.Quotations .body-Quotations .date-Quotations {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .Quotations .body-Quotations .date-Quotations {
+    flex-direction: column;
+  }
+  .Quotations .body-Quotations .date-Quotations .xx {
+    flex-direction: column;
+    width: 100% !important;
+    margin: 0px !important;
+  }
+  .Quotations .body-Quotations .date-Quotations .xx input {
+    margin: 5px 1px !important;
+  }
+  .Quotations .body-Quotations .date-Quotations .xx .btns {
+    width: 100%;
+    margin: 5px auto;
+  }
+}
+.Quotations .body-Quotations .search-Quotations {
+  display: flex;
+  margin: 0 0.9rem 1rem;
+}
+@media (max-width: 768px) {
+  .Quotations .body-Quotations .search-Quotations {
+    width: 100%;
+    flex-direction: column;
+  }
+  .Quotations .body-Quotations .search-Quotations :nth-child(1) input {
+    width: 100%;
+    margin: 0px 0px 10px;
+  }
+}
+.Quotations .body-Quotations table {
+  --bs-border-opacity: 2 !important;
+  border-color: #00ced2 !important;
+}
+@media (max-width: 768px) {
+  .Quotations .body-Quotations table {
+    margin: 0 10px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
