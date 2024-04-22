@@ -9,6 +9,10 @@
   src: url("path/to/DINNextLTArabic-Regular.ttf") format("truetype");
   /* Add other font weights and styles if available */
 }
+.text-color {
+  color: #00ced2 !important;
+}
+
 body,
 html {
   height: 100vh;
@@ -673,6 +677,18 @@ h6 {
   padding: 2px 7%;
   border-radius: 10px;
 }
+.Customer .body-Customer table .Preview {
+  background-color: #A200ff;
+  color: #FFF;
+  padding: 2px 10%;
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .Customer .body-Customer table .Preview {
+    width: 50px;
+    padding: 2px 15%;
+  }
+}
 
 @media (max-width: 768px) {
   .point-sale {
@@ -731,6 +747,13 @@ h6 {
   padding: 2px 7%;
   border-radius: 10px;
 }
+@media (max-width: 768px) {
+  .point-sale .body-point-sale table .condition1 {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+  }
+}
 .point-sale .body-point-sale table .condition2 {
   background-color: #5EA4EB;
   padding: 2px 8%;
@@ -740,7 +763,8 @@ h6 {
   .point-sale .body-point-sale table .condition2 {
     display: flex;
     flex-direction: column;
-    width: 50px;
+    padding: 2px 8% 8px;
+    width: 60px;
   }
 }
 .point-sale .body-point-sale table .Preview {
@@ -835,6 +859,205 @@ h6 {
   .Quotations .body-Quotations table .Preview {
     width: 50px;
     padding: 2px 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .Credit-notes {
+    padding: 3px;
+  }
+}
+.Credit-notes .body-Credit-notes {
+  border-radius: 10px;
+  padding: 0.2rem 0.55rem;
+}
+.Credit-notes .body-Credit-notes .date-Credit-notes {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .Credit-notes .body-Credit-notes .date-Credit-notes {
+    flex-direction: column;
+  }
+  .Credit-notes .body-Credit-notes .date-Credit-notes .xx {
+    flex-direction: column;
+    width: 100% !important;
+    margin: 0px !important;
+  }
+  .Credit-notes .body-Credit-notes .date-Credit-notes .xx input {
+    margin: 5px 1px !important;
+  }
+  .Credit-notes .body-Credit-notes .date-Credit-notes .xx .btns {
+    width: 100%;
+    margin: 5px auto;
+  }
+}
+.Credit-notes .body-Credit-notes .search-Credit-notes {
+  display: flex;
+  margin: 0 0.9rem 1rem;
+}
+@media (max-width: 768px) {
+  .Credit-notes .body-Credit-notes .search-Credit-notes {
+    width: 100%;
+    flex-direction: column;
+  }
+  .Credit-notes .body-Credit-notes .search-Credit-notes :nth-child(1) input {
+    width: 100%;
+    margin: 0px 0px 10px;
+  }
+}
+.Credit-notes .body-Credit-notes table {
+  --bs-border-opacity: 2 !important;
+  border-color: #00ced2 !important;
+}
+@media (max-width: 768px) {
+  .Credit-notes .body-Credit-notes table {
+    margin: 0 10px;
+  }
+}
+.Credit-notes .body-Credit-notes table .condition1 {
+  background-color: #98DB4B;
+  padding: 2px 7%;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .Credit-notes .body-Credit-notes table .condition1 {
+    display: flex;
+    flex-direction: column;
+    padding: 2px 7%;
+    width: 50px;
+  }
+}
+.Credit-notes .body-Credit-notes table .condition2 {
+  background-color: #5EA4EB;
+  padding: 2px 8%;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .Credit-notes .body-Credit-notes table .condition2 {
+    display: flex;
+    flex-direction: column;
+    padding: 2px 8% 8px;
+    width: 60px;
+  }
+}
+.Credit-notes .body-Credit-notes table .Preview {
+  background-color: #A200ff;
+  color: #FFF;
+  padding: 2px 7%;
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .Credit-notes .body-Credit-notes table .Preview {
+    width: 50px;
+    padding: 2px 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .bill-exchange {
+    padding: 3px;
+  }
+}
+.bill-exchange .body-bill-exchange {
+  border-radius: 10px;
+  padding: 0.2rem 0.55rem;
+}
+.bill-exchange .body-bill-exchange .date-bill-exchange {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .bill-exchange .body-bill-exchange .date-bill-exchange {
+    flex-direction: column;
+  }
+  .bill-exchange .body-bill-exchange .date-bill-exchange .xx {
+    flex-direction: column;
+    width: 100% !important;
+    margin: 0px !important;
+  }
+  .bill-exchange .body-bill-exchange .date-bill-exchange .xx input {
+    margin: 5px 1px !important;
+  }
+  .bill-exchange .body-bill-exchange .date-bill-exchange .xx .btns {
+    width: 100%;
+    margin: 5px auto;
+  }
+}
+.bill-exchange .body-bill-exchange .search-bill-exchange {
+  display: flex;
+  margin: 0 0.9rem 1rem;
+}
+@media (max-width: 768px) {
+  .bill-exchange .body-bill-exchange .search-bill-exchange {
+    width: 100%;
+    flex-direction: column;
+  }
+  .bill-exchange .body-bill-exchange .search-bill-exchange :nth-child(1) input {
+    width: 100%;
+    margin: 0px 0px 10px;
+  }
+}
+.bill-exchange .body-bill-exchange table {
+  --bs-border-opacity: 2 !important;
+  border-color: #00ced2 !important;
+}
+@media (max-width: 768px) {
+  .bill-exchange .body-bill-exchange table {
+    margin: 0 10px;
+  }
+}
+.bill-exchange .body-bill-exchange table .condition1 {
+  background-color: #98DB4B;
+  padding: 2px 7%;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .bill-exchange .body-bill-exchange table .condition1 {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+  }
+}
+.bill-exchange .body-bill-exchange table .condition2 {
+  background-color: #5EA4EB;
+  padding: 2px 8%;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .bill-exchange .body-bill-exchange table .condition2 {
+    display: flex;
+    flex-direction: column;
+    padding: 2px 8% 8px;
+    width: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .bill-exchange .body-bill-exchange table .procedures {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.bill-exchange .body-bill-exchange table .procedures .Preview {
+  background-color: #A200ff;
+  color: #FFF;
+  padding: 2px 10%;
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .bill-exchange .body-bill-exchange table .procedures .Preview {
+    width: 35px;
+    margin: 5px auto !important;
+  }
+}
+.bill-exchange .body-bill-exchange table .procedures .Print {
+  background-color: #5EA4EB;
+  color: #FFF;
+  padding: 2px 10%;
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .bill-exchange .body-bill-exchange table .procedures .Print {
+    width: 35px;
+    margin: 5px auto;
   }
 }
 

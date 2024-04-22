@@ -1,12 +1,12 @@
-.point-sale {
+.bill-exchange {
     @media (max-width : 768px) {
         padding: 3px;
     }
 
-    .body-point-sale {
+    .body-bill-exchange {
         border-radius: 10px;
         padding: 0.2rem 0.55rem;
-        .date-point-sale{
+        .date-bill-exchange{
             display: flex;
             @media (max-width :768px) {
                 flex-direction: column;
@@ -24,7 +24,7 @@
                 }
             }        
         }
-        .search-point-sale {
+        .search-bill-exchange {
             display: flex;
             margin: 0 0.9rem 1rem;
             @media (max-width : 768px) {
@@ -65,16 +65,35 @@
                     width: 60px;
                 }
             }
-            .Preview{
-                background-color : #A200ff;
-                color: $white;
-                padding: 2px 10%;
-                border-radius: 50%;
-                @media (max-width:768px) {
-                    width: 50px;
-                    padding: 2px 15%;
+            .procedures{
+                @media (max-width :768px) {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .Preview{
+                    background-color : #A200ff;
+                    color: $white;
+                    padding: 2px 10%;
+                    border-radius: 50%;
+                    @media (max-width:768px) {
+                        width: 35px;
+                        // padding: 2px 5%;
+                        margin: 5px auto !important;
+                    }
+                }
+                .Print{
+                    background-color: #5EA4EB;
+                    color: $white;
+                    padding: 2px 10%;
+                    border-radius: 50%;
+                    @media (max-width:768px) {
+                        width: 35px;
+                        // padding: 2px 15%;
+                        margin: 5px auto;
+                    }
                 }
             }
+            
         }
    
     }

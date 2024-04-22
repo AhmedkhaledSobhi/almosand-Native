@@ -1,12 +1,12 @@
-.point-sale {
+.Credit-notes {
     @media (max-width : 768px) {
         padding: 3px;
     }
 
-    .body-point-sale {
+    .body-Credit-notes {
         border-radius: 10px;
         padding: 0.2rem 0.55rem;
-        .date-point-sale{
+        .date-Credit-notes{
             display: flex;
             @media (max-width :768px) {
                 flex-direction: column;
@@ -24,7 +24,7 @@
                 }
             }        
         }
-        .search-point-sale {
+        .search-Credit-notes {
             display: flex;
             margin: 0 0.9rem 1rem;
             @media (max-width : 768px) {
@@ -51,6 +51,8 @@
                 @media (max-width:768px) {
                     display: flex;
                     flex-direction: column;
+                    padding: 2px 7%;
+
                     width: 50px;
                 }
             }
@@ -68,7 +70,7 @@
             .Preview{
                 background-color : #A200ff;
                 color: $white;
-                padding: 2px 10%;
+                padding: 2px 7%;
                 border-radius: 50%;
                 @media (max-width:768px) {
                     width: 50px;
