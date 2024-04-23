@@ -86,7 +86,6 @@
 
         .filter-categories {
             margin: 15px auto;
-
             .btn-categories {
                 border: 1px solid $gray;
                 background-color: $gray;
@@ -138,14 +137,23 @@
                     }
                 }
             }
-
-            @media (max-width:500px) {
+            /* Media Query for Mobile */
+            @media (max-width:768px) {
                 .col-md-3 {
-                    width: 100% !important;
+                    min-width: 100% !important;
+                }
+            }
+            /* Media Query for Tablet */
+            @media (max-width:995px) {
+                .col-md-3 {
+                    width: 31.55% !important;
+                }
+                .gap-4 {
+                    gap: 0.5rem !important;
                 }
             }
 
-            @media (max-width:995px) {
+            @media (max-width :1024px) {
                 .col-md-3 {
                     width: 31.55% !important;
                 }
@@ -169,7 +177,7 @@
                     }
                 }
             }
-            @media (max-width:500px) {
+            @media (max-width:768) {
                 justify-content: center !important;
             }
         }

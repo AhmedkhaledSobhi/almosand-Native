@@ -68,8 +68,8 @@
         }
     }
 
-     /* Media Query for Tablet */
-     @media (max-width: 995px) {
+    /* Media Query for Tablet */
+    @media (max-width: 992px) {
         .menu-list {
             display: flex;
         }
@@ -80,4 +80,8 @@
             }
         }
     }
+    @media (max-width: 1024px) {
+     
+    }
+    
 }
