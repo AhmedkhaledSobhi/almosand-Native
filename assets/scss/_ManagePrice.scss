@@ -1,84 +1,96 @@
-.Quotations {
-    @media (max-width : 768px) {
-        padding: 3px;
-    }
-
-    .body-Quotations {
-        border-radius: 10px;
-        padding: 0.2rem 0.55rem;
-        // &:first-child
-        .date-Quotations{
-            display: flex;
-            @media (max-width :768px) {
-                flex-direction: column;
-                .xx{
+.sect-Quotations{
+    .Quotations {
+        @media (max-width : 768px) {
+            padding: 3px;
+        }
+        .body-Quotations {
+            border-radius: 10px;
+            padding: 0.2rem 0.55rem;
+            @media (max-width:992px) {
+                padding: 0.2rem 0.50rem;
+            }           
+            .date-Quotations{
+                display: flex;
+                @media (max-width :768px) {
                     flex-direction: column;
-                    width: 100% !important;
-                    margin: 0px !important;
-                    input{
-                        margin:5px 1px !important;
-                    }
-                    .btns{
-                        width: 100%;
-                        margin: 5px auto;
-                    }
-                }
-            }
-        
-            
-        }
-        .search-Quotations {
-            display: flex;
-            margin: 0 0.9rem 1rem;
-            @media (max-width : 768px) {
-                :nth-child(1) {
-                    input {
-                        width: 100%;
-                        margin: 0px 0px 10px;
+                    .xx{
+                        flex-direction: column;
+                        width: 100% !important;
+                        margin: 0px !important;
+                        input{
+                            margin:5px 1px !important;
+                        }
+                        .btns{
+                            width: 100%;
+                            margin: 5px auto;
+                        }
                     }
                 }
-                width: 100%;
-                flex-direction: column;
             }
-        }
-        table {
-            --bs-border-opacity: 2 !important;
-            border-color: $maincolor !important;
-            @media (max-width :768px) {
-                margin: 0 10px;
-            }
-            .condition1{
-                background-color: #98DB4B;
-                padding: 2px 7%;
-                border-radius: 10px;
-            }
-            .condition2{
-               background-color : #5EA4EB;
-                padding: 2px 8%;
-                border-radius: 10px;
-                @media (max-width:768px) {
-                    display: flex;
+            .search-Quotations {
+                display: flex;
+                margin: 0 0.9rem 1rem;
+                @media (max-width : 768px) {
+                    :nth-child(1) {
+                        input {
+                            width: 100%;
+                            margin: 0px 0px 10px;
+                        }
+                    }
+                    width: 100%;
                     flex-direction: column;
-                    width: 50px;
                 }
             }
-            .Preview{
-                background-color : #A200ff;
-                color: $white;
-                padding: 2px 10%;
-                border-radius: 50%;
-                @media (max-width:768px) {
-                    width: 50px;
-                    padding: 2px 15%;
+            table {
+                --bs-border-opacity: 2 !important;
+                border-color: $maincolor !important;
+                @media (max-width :768px) {
+                    margin: 0 10px;
+                }
+                @media (max-width :992px) {
+                    .w-t-col{
+                        width: 15% ;
+                    }
+                    
+                }
+                .condition1{
+                    background-color: #98DB4B;
+                    padding: 2px 7%;
+                    border-radius: 10px;
+                }
+                .condition2{
+                   background-color : #5EA4EB;
+                    padding: 2px 8%;
+                    border-radius: 10px;
+                    @media (max-width:768px) {
+                        display: flex;
+                        flex-direction: column;
+                        width: 50px;
+                    }
+                    @media (max-width:992px) {
+                        flex-direction: column !important;
+                        padding: 0 10px;
+                        width: 1000px !important;
+                        margin: 0px !important;
+                    }
+                }
+                .Preview{
+                    background-color : #A200ff;
+                    color: $white;
+                    padding: 2px 10%;
+                    border-radius: 50%;
+                    @media (max-width:768px) {
+                        width: 50px;
+                        padding: 2px 15%;
+                    }
+                    @media (max-width:992px) {
+                        padding: 2px 15%;
+                    }
                 }
             }
-
         }
-   
     }
-    // :last-child{
-    //     @media (max-width :768px) {
-    //         flex-direction: column;
-    //     }
-    // }
+    @media (max-width : 992px) {
+        width: 100% !important;
+    }
 }
