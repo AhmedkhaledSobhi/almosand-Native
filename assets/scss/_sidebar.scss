@@ -1,22 +1,15 @@
 .sidebar {
-    // height: 100 !important;
     width: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
+    // position: relative;
+    // top: 0;
+    // left: 0;
 
     .menu-list {
         list-style-type: none;
         padding: 0;
-
-
         .menu-item {
             flex: 0 0 calc(33.33% - 20px);
-            /* Set flex basis to 33.33% with margin */
             margin: 0 10px 10px 0;
-            /* Adjust margin as needed */
-
-
             display: flex;
             align-items: center;
             justify-content: center;
@@ -72,7 +65,19 @@
 
         .menu-item {
             flex-basis: calc(50% - 20px);
-            /* Set flex basis to 50% for two items per row */
+        }
+    }
+
+     /* Media Query for Tablet */
+     @media (max-width: 995px) {
+        .menu-list {
+            display: flex;
+        }
+        .menu-item {
+            padding: 0 5px  !important;
+            a{
+                width:85px   !important;
+            }
         }
     }
 }

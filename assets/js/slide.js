@@ -1,13 +1,19 @@
-let initialSlidesPerView = 11;
+let initialSlidesPerView = 10;
 
 if (window.innerWidth < 768) {
     // Change slides per view for smaller screens
-    initialSlidesPerView = 3; 
+    initialSlidesPerView = 5; 
+}
+
+
+if (window.innerWidth < 995) {
+    // Change slides per view for large screens
+    initialSlidesPerView = 6; 
 }
 
 const swiper = new Swiper(".mySwiper", {
     slidesPerView: initialSlidesPerView,
-    spaceBetween: 5,
+    spaceBetween: 4,
     freeMode: true,
     pagination: {
         el: ".swiper-pagination",
