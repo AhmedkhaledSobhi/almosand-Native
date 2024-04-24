@@ -370,9 +370,9 @@
                                     </div>
                                     <div class="col-md-3 text-center ps-4">
                                         <input class="w-100 text-center" type="number" value="0" id="">
-                                        <!-- <span>
-                                    40.00
-                                </span> -->
+                                            <!-- <span>
+                                                40.00
+                                            </span> -->
                                     </div>
                                 </div>
                                 <div class="row ">
@@ -386,7 +386,6 @@
                                     </div>
                                 </div>
                                 <div class="row my-4">
-                                    <div class="">
                                         <button class="btns w-100 mx-auto mb-3" type="button" data-bs-toggle="modal"
                                             data-bs-target="#cardPayment">
                                             ادفع
@@ -394,19 +393,27 @@
                                         </button>
 
                                         <!-- Modal -->
-                                        <div class="modal" id="cardPayment" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                        <div class="modal Confirm-payment-process" id="cardPayment" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                                             aria-labelledby="cardPaymentLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header d-flex justify-content-between">
-                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                                        <h1 class="modal-title fs-5">
                                                             تاكيد عملية الدفع $
                                                         </h1>
                                                         <button type="button" class="btn-close  ms-0" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
                                                     </div>
-                                                    <div class="modal-body">
-                                                        <div class="row">
+                                                    <div class="modal-body"  >
+                                                        <div class="row" id="" >
+                                                            <div class="d-flex align-items-center justify-content-evenly mb-3">
+                                                                <button class="btns btn-payment-process" id="addPaymentProcess">
+                                                                    عملية دفع
+                                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                                </button>
+                                                                <h5 class="">8000.00</h5>
+                                                            </div>
+                                                            <hr>
                                                             <div class="col-md-6">
                                                                 <div>
                                                                     <label for="paymentMethod">طريقة الدفع او السداد</label>
@@ -424,72 +431,45 @@
                                                             <div class="col-md-6">
                                                                 <div>
                                                                     <label for="total">الاجمالي</label>
-                                                                    <input class="px-2" type="number" name="total" id="total" placeholder="الاجمالي">
+                                                                    <input class="px-2 w-100" type="number" name="total" id="total" placeholder="الاجمالي">
                                                                 </div>
                                                             </div>
+
+                                                            <div id="addChild">
+                                                                <!-- Content add here -->
+
+                                                            </div>
+                                                            <hr class="my-3">
                                                             <div class="col-md-6">
                                                                 <div>
                                                                     <label for="balanceDue">الرصيد المستحق</label>
-                                                                    <input class="px-2" type="number" name="balanceDue" id="balanceDue" placeholder="الرصيد المستحق">
+                                                                    <input class="px-2 w-100" type="number" name="balanceDue" id="balanceDue" placeholder="الرصيد المستحق">
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div>
                                                                     <label for="amountChanged">تغير المبلغ</label>
-                                                                    <input class="px-2" type="number" name="amountChanged" id="amountChanged" placeholder="تغير المبلغ">
+                                                                    <input class="px-2 w-100" type="number" name="amountChanged" id="amountChanged" placeholder="تغير المبلغ">
                                                                 </div>
                                                             </div>
-                                                          
                                                         </div>
-
-                                                        <hr>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div>
-                                                                    <label for="paymentMethod">طريقة الدفع او السداد</label>
-                                                                    <select class="select-user w-100 px-2" id="paymentMethod" aria-label="">
-                                                                        <option class="" selected> كاش </option>
-                                                                        <option value="1"> تحويل بنكي </option>
-                                                                        <option value="2"> شيك </option>
-                                                                        <option value="3"> ماستر كارد </option>
-                                                                        <option value="4"> Card </option>
-                                                                        <option value="5"> رصيد السفظة Wallct </option>
-                                                                        <option value="6"> اخري </option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div>
-                                                                    <label for="total">الاجمالي</label>
-                                                                    <input class="px-2" type="number" name="total" id="total" placeholder="الاجمالي">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div>
-                                                                    <label for="balanceDue">الرصيد المستحق</label>
-                                                                    <input class="px-2" type="number" name="balanceDue" id="balanceDue" placeholder="الرصيد المستحق">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div>
-                                                                    <label for="amountChanged">تغير المبلغ</label>
-                                                                    <input class="px-2" type="number" name="amountChanged" id="amountChanged" placeholder="تغير المبلغ">
-                                                                </div>
-                                                            </div>
-                                                          
-                                                        </div>
-
-                                                        <div class=" d-flex ">
-                                                                <label for="total" class="d-inline-block"> الحساب </label>
-                                                                <input class=" px-2" type="number" name="total" id="total" placeholder="الاجمالي">
-                                                        </div>
+                                            
+                                                        <div class="text-center ">
+                                                            <label for="payment " class="d-inline"> الحساب </label>
+                                                            <select class="select-user w-100 px-2" id="payment" aria-label="">
+                                                                <option class="" selected> Default Account - Default ACcount </option>
+                                                                <option value="1"> Default Account Purchase - Default ACcount Purchase </option>
+                                                                <option value="6"> الاصول النجار </option>
+                                                            </select>                                             
+                                                       </div>
                                                     </div>
+
                                                     <div class="modal-footer d-flex justify-content-center">
-                                                        <button type="button" class="btn btn-secondary">
+                                                        <button type="button" class="btn btn-Pay-now-print btn-sndary">
                                                             ادفع الان + طباعة
                                                             <i class="fa-solid fa-print"></i>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary">
+                                                        <button type="button" class="btn btn-Pay-now">
                                                             ادفع الان
                                                             <i class="fa-solid fa-sack-dollar"></i>
                                                         </button>
@@ -497,9 +477,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-
-
                                     <!-- ----------------------------------------- -->
                                     <div class="col-md-6">
                                         <button class="btn btn-payment"> احجز لاحقا</button>
@@ -511,6 +488,8 @@
                             </div>
                         </div>
                     </div>
+
+
                     <!-- ------------ screan desplay all products ---------------------- -->
                     <div class="col-md-9 sect-dash-product">
                         <div class="container dash-product">
@@ -841,6 +820,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- ---------------- code custmaize slide js ----------------- -->
     <script src="assets/js/slide.js"></script>
+    <sCript src="assets/js/main.js"></sCript>
 
 
 

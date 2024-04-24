@@ -39,6 +39,7 @@ body {
 .btns:hover {
   background-color: #00ced2;
   color: #FFF;
+  box-shadow: 0 0 0 0.25rem rgba(0, 206, 210, 0.25);
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -601,6 +602,36 @@ h6 {
 .products-cart .sec-payment .btn-cancel:hover {
   background-color: #dc3545;
 }
+.products-cart .sec-payment .Confirm-payment-process .btn-payment-process {
+  background-color: #00ced2;
+  color: #FFF;
+}
+.products-cart .sec-payment .Confirm-payment-process .btn-Pay-now-print {
+  background-color: #30CF08;
+  color: #FFF;
+  border: 1px solid transparent;
+}
+.products-cart .sec-payment .Confirm-payment-process .btn-Pay-now-print:hover {
+  background-color: #00ced2;
+  box-shadow: 0 0 0 0.25rem rgba(0, 206, 210, 0.25);
+}
+.products-cart .sec-payment .Confirm-payment-process .btn-Pay-now {
+  background-color: #0723D8;
+  color: #FFF;
+  border: 1px solid transparent;
+}
+.products-cart .sec-payment .Confirm-payment-process .btn-Pay-now:hover {
+  background-color: rgba(7, 35, 216, 0.8);
+}
+@media (max-width: 768px) {
+  .products-cart .sec-payment .Confirm-payment-process {
+    background: #000;
+    padding: 0px !important;
+  }
+  .products-cart .sec-payment .Confirm-payment-process .col-md-6 {
+    width: 100% !important;
+  }
+}
 @media (max-width: 768px) {
   .products-cart {
     border-left: 0px;
@@ -709,7 +740,7 @@ h6 {
     right: 15px;
     border: 0.5px solid;
     border-radius: 15%;
-    z-index: 999999999999;
+    z-index: 99999999 !important;
     display: flex;
     align-items: center;
     justify-content: center;

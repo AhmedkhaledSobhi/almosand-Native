@@ -60,6 +60,7 @@ body {
     &:hover{
         background-color: $maincolor;
         color: $white;
+        box-shadow:  $secandShadow;
     }
 }
 input[type="number"]::-webkit-inner-spin-button,
