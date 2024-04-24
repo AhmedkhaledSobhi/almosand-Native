@@ -13,6 +13,29 @@
     }
    .navbar-collapse{
     padding: 5px;
+
+
+    .nav-shift-details{
+        @media (max-width: 992px) {
+            padding: 0px !important;
+            display: -webkit-inline-box !important; 
+            margin: 20px auto !important;
+            li{
+                margin:  auto !important;
+            } 
+        }
+        @media (max-width: 768px) {
+            padding: 0 !important;
+            li{
+                margin: 8px auto;    
+                a{
+                    cursor: pointer;
+                } 
+            }
+        }
+    }
+
+    
    }
     .form-user {
         width: 20rem;

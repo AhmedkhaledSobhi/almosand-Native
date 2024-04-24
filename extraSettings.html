@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selling point</title>
+    <title>Extra settings</title>
     <!-- --------------------- this is fonts --------------------------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,6 @@
 </head>
 
 <body>
-
     <!-- ------------------------ Start section Navbar ----------------------- -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary  ">
         <div class="container-fluid">
@@ -96,9 +95,11 @@
     </nav>
     <!-- ------------------------ End section Navbar ----------------------- -->
 
+
+
     <section class="container-fluid pt-5 mt-5  ">
         <div class="row">
-            <!-- ------------ Start Control interface system elements --------------------- -->
+            <!-- ------------ Control interface system elements --------------------- -->
             <div class="col-md-1">
                 <div class="">
                     <div class="sidebar ">
@@ -186,7 +187,6 @@
                     </div>
                 </div>
             </div>
-            <!-- ------------ End Control interface system elements --------------------- -->
 
             <div class="col-lg-11">
                 <div class="row">
@@ -372,7 +372,7 @@
                                     </div>
                                     <div class="col-md-3 text-center ps-4">
                                         <input class="w-100 text-center" type="number" value="0" id="">
-                                            <!-- <span>
+                                        <!-- <span>
                                                 40.00
                                             </span> -->
                                     </div>
@@ -388,98 +388,111 @@
                                     </div>
                                 </div>
                                 <div class="row my-4">
-                                        <button class="btns w-100 mx-auto mb-3" type="button" data-bs-toggle="modal"
-                                            data-bs-target="#cardPayment">
-                                            ادفع
-                                            <i class="fa-solid fa-money-bill-wave"></i>
-                                        </button>
+                                    <button class="btns w-100 mx-auto mb-3" type="button" data-bs-toggle="modal"
+                                        data-bs-target="#cardPayment">
+                                        ادفع
+                                        <i class="fa-solid fa-money-bill-wave"></i>
+                                    </button>
 
-                                        <!-- Modal -->
-                                        <div class="modal Confirm-payment-process" id="cardPayment" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                                            aria-labelledby="cardPaymentLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header d-flex justify-content-between">
-                                                        <h1 class="modal-title fs-5">
-                                                            تاكيد عملية الدفع $
-                                                        </h1>
-                                                        <button type="button" class="btn-close-payment ms-0" data-bs-dismiss="modal" aria-label="Close">
-                                                            <i class="fa-solid fa-xmark"></i>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body"  >
-                                                        <div class="row" id="" >
-                                                            <div class="d-flex align-items-center justify-content-evenly mb-3">
-                                                                <button class="btns btn-payment-process" id="addPaymentProcess">
-                                                                    عملية دفع
-                                                                    <i class="fa-solid fa-circle-plus"></i>
-                                                                </button>
-                                                                <h5 class="">8000.00</h5>
-                                                            </div>
-                                                            <hr>
-                                                            <div class="col-md-6">
-                                                                <div>
-                                                                    <label for="paymentMethod">طريقة الدفع او السداد</label>
-                                                                    <select class="select-user w-100 px-2" id="paymentMethod" aria-label="">
-                                                                        <option class="" selected> كاش </option>
-                                                                        <option value="1"> تحويل بنكي </option>
-                                                                        <option value="2"> شيك </option>
-                                                                        <option value="3"> ماستر كارد </option>
-                                                                        <option value="4"> Card </option>
-                                                                        <option value="5"> رصيد السفظة Wallct </option>
-                                                                        <option value="6"> اخري </option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div>
-                                                                    <label for="total">الاجمالي</label>
-                                                                    <input class="px-2 w-100" type="number" name="total" id="total" placeholder="الاجمالي">
-                                                                </div>
-                                                            </div>
-
-                                                            <div id="addChild">
-                                                                <!-- Content add here -->
-
-                                                            </div>
-                                                            <hr class="my-3">
-                                                            <div class="col-md-6">
-                                                                <div>
-                                                                    <label for="balanceDue">الرصيد المستحق</label>
-                                                                    <input class="px-2 w-100" type="number" name="balanceDue" id="balanceDue" placeholder="الرصيد المستحق">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div>
-                                                                    <label for="amountChanged">تغير المبلغ</label>
-                                                                    <input class="px-2 w-100" type="number" name="amountChanged" id="amountChanged" placeholder="تغير المبلغ">
-                                                                </div>
+                                    <!-- Modal -->
+                                    <div class="modal Confirm-payment-process" id="cardPayment"
+                                        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                        aria-labelledby="cardPaymentLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header d-flex justify-content-between">
+                                                    <h1 class="modal-title fs-5">
+                                                        تاكيد عملية الدفع $
+                                                    </h1>
+                                                    <button type="button" class="btn-close-payment ms-0"
+                                                        data-bs-dismiss="modal" aria-label="Close">
+                                                        <i class="fa-solid fa-xmark"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row" id="">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-evenly mb-3">
+                                                            <button class="btns btn-payment-process"
+                                                                id="addPaymentProcess">
+                                                                عملية دفع
+                                                                <i class="fa-solid fa-circle-plus"></i>
+                                                            </button>
+                                                            <h5 class="">8000.00</h5>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="col-md-6">
+                                                            <div>
+                                                                <label for="paymentMethod">طريقة الدفع او السداد</label>
+                                                                <select class="select-user w-100 px-2"
+                                                                    id="paymentMethod" aria-label="">
+                                                                    <option class="" selected> كاش </option>
+                                                                    <option value="1"> تحويل بنكي </option>
+                                                                    <option value="2"> شيك </option>
+                                                                    <option value="3"> ماستر كارد </option>
+                                                                    <option value="4"> Card </option>
+                                                                    <option value="5"> رصيد السفظة Wallct </option>
+                                                                    <option value="6"> اخري </option>
+                                                                </select>
                                                             </div>
                                                         </div>
-                                            
-                                                        <div class="text-center ">
-                                                            <label for="payment " class="d-inline"> الحساب </label>
-                                                            <select class="select-user w-100 px-2" id="payment" aria-label="">
-                                                                <option class="" selected> Default Account - Default ACcount </option>
-                                                                <option value="1"> Default Account Purchase - Default ACcount Purchase </option>
-                                                                <option value="6"> الاصول النجار </option>
-                                                            </select>                                             
-                                                       </div>
+                                                        <div class="col-md-6">
+                                                            <div>
+                                                                <label for="total">الاجمالي</label>
+                                                                <input class="px-2 w-100" type="number" name="total"
+                                                                    id="total" placeholder="الاجمالي">
+                                                            </div>
+                                                        </div>
+
+                                                        <div id="addChild">
+                                                            <!-- Content add here -->
+
+                                                        </div>
+                                                        <hr class="my-3">
+                                                        <div class="col-md-6">
+                                                            <div>
+                                                                <label for="balanceDue">الرصيد المستحق</label>
+                                                                <input class="px-2 w-100" type="number"
+                                                                    name="balanceDue" id="balanceDue"
+                                                                    placeholder="الرصيد المستحق">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div>
+                                                                <label for="amountChanged">تغير المبلغ</label>
+                                                                <input class="px-2 w-100" type="number"
+                                                                    name="amountChanged" id="amountChanged"
+                                                                    placeholder="تغير المبلغ">
+                                                            </div>
+                                                        </div>
                                                     </div>
 
-                                                    <div class="modal-footer d-flex justify-content-center">
-                                                        <button type="button" class="btn btn-Pay-now-print btn-sndary">
-                                                            ادفع الان + طباعة
-                                                            <i class="fa-solid fa-print"></i>
-                                                        </button>
-                                                        <button type="button" class="btns btn-Pay-now">
-                                                            ادفع الان
-                                                            <i class="fa-solid fa-sack-dollar"></i>
-                                                        </button>
+                                                    <div class="text-center ">
+                                                        <label for="payment " class="d-inline"> الحساب </label>
+                                                        <select class="select-user w-100 px-2" id="payment"
+                                                            aria-label="">
+                                                            <option class="" selected> Default Account - Default ACcount
+                                                            </option>
+                                                            <option value="1"> Default Account Purchase - Default
+                                                                ACcount Purchase </option>
+                                                            <option value="6"> الاصول النجار </option>
+                                                        </select>
                                                     </div>
+                                                </div>
+
+                                                <div class="modal-footer d-flex justify-content-center">
+                                                    <button type="button" class="btn btn-Pay-now-print btn-sndary">
+                                                        ادفع الان + طباعة
+                                                        <i class="fa-solid fa-print"></i>
+                                                    </button>
+                                                    <button type="button" class="btns btn-Pay-now">
+                                                        ادفع الان
+                                                        <i class="fa-solid fa-sack-dollar"></i>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
                                     <!-- ----------------------------------------- -->
                                     <div class="col-md-6">
                                         <button class="btns btn-payment"> احجز لاحقا</button>
@@ -493,320 +506,145 @@
                     </div>
                     <!-- ------------ End payment products cart ------------------------ -->
 
-                    <!-- ------------ Start screan desplay all products ---------------------- -->
-                    <div class="col-md-9 sect-dash-product">
-                        <div class="container dash-product">
-                            <div class="search row">
-                                <div class="col-lg d-flex ">
-                                    <button class="btn btn-qrCode" type="submit">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                            viewBox="0 0 512 512" version="1.1">
-                                            <path d="" stroke="none" fill-rule="evenodd" />
-                                            <path
-                                                d="M 85 43.543 C 69.768 46.897, 54.757 58.491, 48.160 72 C 42.777 83.021, 41.865 90.078, 42.202 118.102 L 42.500 142.872 45.391 145.888 C 48.973 149.625, 52.776 150.538, 57.146 148.712 C 63.500 146.056, 63.443 146.319, 64.085 116.600 C 64.778 84.502, 65.206 82.646, 73.926 73.926 C 82.646 65.206, 84.502 64.778, 116.600 64.085 C 146.319 63.443, 146.056 63.500, 148.712 57.146 C 150.538 52.776, 149.625 48.973, 145.888 45.391 L 142.872 42.500 117.186 42.306 C 97.992 42.161, 89.857 42.474, 85 43.543 M 369.500 42.954 C 366.865 44.044, 363.402 47.932, 362.543 50.766 C 361.658 53.682, 363.496 59.233, 366.140 61.629 C 368.013 63.327, 370.714 63.554, 395.352 64.085 C 427.503 64.778, 429.352 65.204, 438.074 73.926 C 446.794 82.646, 447.222 84.502, 447.915 116.600 C 448.557 146.319, 448.500 146.056, 454.854 148.712 C 459.224 150.538, 463.027 149.625, 466.609 145.888 L 469.500 142.872 469.798 118.102 C 470.135 90.078, 469.223 83.021, 463.840 72 C 459.575 63.268, 448.731 52.423, 440 48.161 C 429.355 42.963, 422.516 42.029, 395.500 42.081 C 382.300 42.106, 370.600 42.499, 369.500 42.954 M 123.640 107.591 C 120.397 108.614, 117.172 110.732, 113.949 113.956 C 106.546 121.359, 105.757 125.195, 106.166 151.795 L 106.500 173.500 109.474 178.870 C 111.110 181.824, 113.835 185.297, 115.528 186.589 C 122.196 191.675, 124.268 192.002, 149.718 191.978 C 176.564 191.953, 178.303 191.580, 185.201 184.369 C 191.662 177.615, 192 175.883, 192 149.500 C 192 124.295, 191.663 122.180, 186.589 115.528 C 185.297 113.835, 181.824 111.110, 178.870 109.474 L 173.500 106.500 151 106.279 C 133.086 106.102, 127.509 106.370, 123.640 107.591 M 219.315 107.464 C 215.648 109.058, 213 113.498, 213 118.050 C 213 120.299, 213.973 122.173, 216.400 124.600 L 219.800 128 248.338 128 L 276.876 128 277.188 146.480 L 277.500 164.959 280.273 167.730 C 282.556 170.011, 283.920 170.500, 288 170.500 C 292.080 170.500, 293.444 170.011, 295.727 167.729 L 298.500 164.958 298.799 140.023 C 299.134 111.997, 298.756 110.049, 292.466 107.421 C 287.573 105.377, 224.028 105.414, 219.315 107.464 M 339.863 106.705 C 334.773 107.488, 326.714 113.270, 323.536 118.418 L 320.500 123.336 320.183 147.418 C 319.973 163.383, 320.249 172.797, 321.002 175.348 C 322.447 180.240, 329.314 187.760, 334.500 190.129 C 338.011 191.733, 341.406 191.959, 362.282 191.978 C 387.732 192.002, 389.804 191.675, 396.472 186.589 C 398.165 185.297, 400.890 181.824, 402.526 178.870 L 405.500 173.500 405.834 151.795 C 406.243 125.205, 405.453 121.357, 398.064 113.969 C 390.890 106.795, 387.128 105.966, 362.568 106.150 C 351.531 106.232, 341.313 106.482, 339.863 106.705 M 129.571 129.571 C 127.389 131.754, 127.216 167.105, 129.379 168.900 C 130.336 169.694, 136.687 169.961, 150.129 169.772 L 169.500 169.500 169.772 150.129 C 169.961 136.687, 169.694 130.336, 168.900 129.379 C 167.105 127.216, 131.754 127.389, 129.571 129.571 M 343.100 129.379 C 342.306 130.336, 342.039 136.687, 342.228 150.129 L 342.500 169.500 361.871 169.772 C 375.313 169.961, 381.664 169.694, 382.621 168.900 C 384.784 167.105, 384.611 131.754, 382.429 129.571 C 380.246 127.389, 344.895 127.216, 343.100 129.379 M 219.500 149.945 C 215.498 151.583, 213.500 154.960, 213.500 160.082 C 213.500 164.072, 214.002 165.457, 216.270 167.727 C 219.017 170.477, 219.166 170.503, 234.047 170.822 L 249.055 171.145 252.528 167.672 C 255.388 164.812, 256 163.460, 256 160 C 256 156.557, 255.387 155.187, 252.600 152.400 L 249.200 149 235.350 149.063 C 227.732 149.098, 220.600 149.495, 219.500 149.945 M 216.400 195.400 C 212.549 199.251, 211.988 203.142, 214.566 208.128 C 217.145 213.116, 220.896 214, 239.468 214 L 256 214 256 223.891 L 256 233.781 248.548 234.158 C 241.988 234.489, 240.740 234.874, 238.129 237.377 C 236.497 238.940, 234.880 241.340, 234.537 242.710 C 233.664 246.187, 235.663 251.589, 238.707 253.984 C 241.124 255.885, 242.718 256, 266.735 256 L 292.200 256 295.600 252.600 C 299.451 248.749, 300.012 244.858, 297.434 239.872 C 295.452 236.039, 290.624 234, 283.532 234 L 278 234 278 224 L 278 214 283.532 214 C 290.624 214, 295.452 211.961, 297.434 208.128 C 300.012 203.142, 299.451 199.251, 295.600 195.400 L 292.200 192 256 192 L 219.800 192 216.400 195.400 M 111.381 214.910 C 107.071 217.537, 106 221.473, 106 234.681 C 106 251.132, 108.659 256, 117.646 256 C 121.003 256, 122.464 255.382, 124.923 252.923 L 128 249.846 128 234.823 L 128 219.800 124.600 216.400 C 120.611 212.411, 116.279 211.922, 111.381 214.910 M 155.500 213.945 C 151.498 215.583, 149.500 218.960, 149.500 224.082 C 149.500 228.066, 150.002 229.457, 152.253 231.708 C 154.671 234.126, 155.920 234.508, 162.503 234.840 L 170 235.219 170 240.641 C 170 243.624, 170.627 247.566, 171.394 249.401 C 173.907 255.415, 175.741 256, 192.088 256 C 208.558 256, 210.786 255.209, 212.972 248.585 C 214.431 244.163, 213.521 240.874, 209.871 237.377 C 207.260 234.874, 206.012 234.489, 199.452 234.158 L 192 233.781 192 226.791 C 192 220.174, 191.818 219.618, 188.600 216.400 L 185.200 213 171.350 213.063 C 163.732 213.098, 156.600 213.495, 155.500 213.945 M 323.400 216.400 L 320 219.800 320 245.265 C 320 269.282, 320.115 270.876, 322.016 273.293 C 324.411 276.337, 329.813 278.336, 333.290 277.463 C 334.660 277.120, 337.068 275.496, 338.640 273.855 L 341.500 270.873 341.818 247.686 C 342.178 221.422, 341.638 217.970, 336.696 214.956 C 331.723 211.924, 327.408 212.392, 323.400 216.400 M 387.400 216.400 C 384.182 219.618, 384 220.174, 384 226.791 L 384 233.781 376.548 234.158 C 369.988 234.489, 368.740 234.874, 366.129 237.377 C 362.479 240.874, 361.569 244.163, 363.028 248.585 C 364.891 254.230, 368.139 256, 376.635 256 L 384 256 384 263.365 C 384 271.861, 385.770 275.109, 391.415 276.972 C 395.841 278.433, 399.126 277.521, 402.640 273.855 L 405.500 270.873 405.818 247.686 C 406.178 221.422, 405.638 217.970, 400.696 214.956 C 395.723 211.924, 391.408 212.392, 387.400 216.400 M 111.304 278.929 C 104.574 283.090, 104.957 293.858, 111.966 297.482 C 114.645 298.868, 118.628 299.055, 140.023 298.799 L 164.958 298.500 167.729 295.727 C 170.011 293.444, 170.500 292.080, 170.500 288 C 170.500 283.920, 170.011 282.556, 167.729 280.273 L 164.958 277.500 139.729 277.227 C 116.083 276.971, 114.300 277.077, 111.304 278.929 M 195.472 280.328 C 192.612 283.188, 192 284.540, 192 288 C 192 291.460, 192.612 292.812, 195.472 295.672 L 198.945 299.145 213.953 298.822 C 228.834 298.503, 228.983 298.477, 231.730 295.727 C 234.011 293.444, 234.500 292.080, 234.500 288 C 234.500 283.920, 234.011 282.556, 231.730 280.273 C 228.983 277.523, 228.834 277.497, 213.953 277.178 L 198.945 276.855 195.472 280.328 M 259.472 280.328 C 256.612 283.188, 256 284.540, 256 288 C 256 291.443, 256.613 292.813, 259.400 295.600 C 262.628 298.828, 263.159 299, 269.900 299 L 277 299 277 309.500 L 277 320 248.400 320 L 219.800 320 216.400 323.400 C 212.549 327.251, 211.988 331.142, 214.566 336.128 C 217.447 341.700, 219.566 342, 256 342 C 292.555 342, 294.545 341.714, 297.482 336.034 C 298.868 333.355, 299.055 329.372, 298.799 307.977 L 298.500 283.042 295.730 280.271 C 292.984 277.524, 292.831 277.497, 277.953 277.178 L 262.945 276.855 259.472 280.328 M 326.378 299.398 C 320.584 301.992, 320 303.878, 320 320 C 320 342.134, 319.806 342, 352 342 C 381.909 342, 384 341.038, 384 327.277 L 384 320 391.365 320 C 399.861 320, 403.109 318.230, 404.972 312.585 C 406.433 308.158, 405.521 304.873, 401.853 301.360 L 398.869 298.500 383.954 298.500 L 369.038 298.500 365.789 301.750 C 362.802 304.737, 362.508 305.606, 362.160 312.500 L 361.781 320 352 320 L 342.219 320 341.840 312.500 C 341.499 305.759, 341.159 304.698, 338.481 302.023 C 334.893 298.439, 330.599 297.508, 326.378 299.398 M 120.168 322.603 C 114.939 325.209, 111.863 328.442, 108.374 335 C 106.758 338.037, 106.467 341.373, 106.172 360.205 C 105.755 386.808, 106.543 390.638, 113.952 398.048 C 121.360 405.455, 125.192 406.243, 151.795 405.834 L 173.500 405.500 178.870 402.526 C 181.824 400.890, 185.297 398.165, 186.589 396.472 C 191.675 389.804, 192.002 387.732, 191.978 362.282 C 191.953 335.436, 191.580 333.697, 184.369 326.799 C 177.604 320.328, 175.910 320, 149.228 320 C 125.556 320, 125.357 320.018, 120.168 322.603 M 129.220 343.180 C 128.349 344.051, 128 349.615, 128 362.629 C 128 377.867, 128.258 381.115, 129.571 382.429 C 131.754 384.611, 167.105 384.784, 168.900 382.621 C 169.694 381.664, 169.961 375.313, 169.772 361.871 L 169.500 342.500 149.970 342.230 C 135.623 342.031, 130.117 342.283, 129.220 343.180 M 49.500 362.954 C 48.400 363.409, 46.375 364.991, 45 366.469 L 42.500 369.157 42.202 393.913 C 41.865 421.920, 42.778 428.980, 48.160 440 C 52.424 448.731, 63.269 459.576, 72 463.840 C 83.021 469.223, 90.078 470.135, 118.102 469.798 L 142.872 469.500 145.888 466.609 C 149.625 463.027, 150.538 459.224, 148.712 454.854 C 146.056 448.500, 146.319 448.557, 116.600 447.915 C 84.502 447.222, 82.646 446.794, 73.926 438.074 C 65.206 429.354, 64.778 427.498, 64.085 395.400 C 63.445 365.766, 63.482 365.936, 57.282 363.345 C 53.660 361.831, 52.371 361.766, 49.500 362.954 M 219.315 363.438 C 214.019 365.784, 213 369.138, 213.004 384.200 C 213.007 395.548, 213.289 397.962, 214.926 400.647 C 217.475 404.826, 222.657 406.598, 227.577 404.974 C 232.803 403.250, 234.992 399.053, 234.996 390.750 L 235 384 252.865 384 C 269.262 384, 270.941 383.834, 273.293 381.984 C 276.337 379.589, 278.336 374.187, 277.463 370.710 C 277.120 369.340, 275.496 366.932, 273.855 365.360 L 270.873 362.500 246.686 362.263 C 227.630 362.077, 221.824 362.326, 219.315 363.438 M 305.500 362.954 C 304.400 363.409, 302.375 364.992, 301 366.471 C 298.566 369.091, 298.500 369.552, 298.500 384.061 L 298.500 398.962 301.769 402.231 L 305.038 405.500 352 405.500 L 398.962 405.500 402.231 402.231 L 405.500 398.962 405.500 384.046 L 405.500 369.131 402.640 366.147 C 399.127 362.479, 395.842 361.567, 391.415 363.028 C 385.770 364.891, 384 368.139, 384 376.635 L 384 384 373.500 384 L 363 384 362.996 377.250 C 362.992 368.947, 360.803 364.750, 355.577 363.026 C 352.828 362.118, 351.172 362.118, 348.423 363.026 C 343.197 364.750, 341.008 368.947, 341.004 377.250 L 341 384 330.500 384 L 320 384 320 376.723 C 320 368.381, 318.608 365.570, 313.401 363.394 C 309.660 361.831, 308.387 361.760, 305.500 362.954 M 454.500 363.347 C 448.531 366.026, 448.551 365.925, 447.915 395.400 C 447.222 427.498, 446.794 429.354, 438.074 438.074 C 429.354 446.794, 427.498 447.222, 395.400 447.915 C 365.681 448.557, 365.944 448.500, 363.288 454.854 C 361.462 459.224, 362.375 463.027, 366.112 466.609 L 369.128 469.500 393.898 469.798 C 421.922 470.135, 428.979 469.223, 440 463.840 C 448.731 459.576, 459.576 448.731, 463.840 440 C 469.225 428.975, 470.135 421.925, 469.798 393.852 L 469.500 369.035 466.500 366.040 C 462.924 362.471, 458.609 361.503, 454.500 363.347"
-                                                stroke="none" fill-rule="evenodd" />
-                                        </svg>
-                                    </button>
 
-                                    <form class="form-search" role="search">
-                                        <input class="form-control" type="search" placeholder="اسم المنتج ..."
-                                            aria-label="Search">
-                                        <button class="btn me-2" type="submit">بحث</button>
-                                    </form>
-                                </div>
-                                <select class="select-Depot ms-3" aria-label="Default select example">
-                                    <option selected>المستودع</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-                                <div class="btn-layer">
-                                    <button id="showButton" class="btn-open-cart d-no ">
-                                        <!-- <Span>افتح</Span> -->
-                                        <i class="fa-solid fa-cart-shopping "></i>
-                                        <small class="d-inline">(1)</small>
-                                    </button>
-
-                                    <button id="hideButton" class="btn-close-cart ">
-                                        <Span>اغلاق</Span>
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </button>
-                                </div>
-                            </div>
-
+                    <!-- ------------ Start screan Extra settings ---------------------- -->
+                    <div class="col-md-9 sect-extra-setting">
+                        <div class=" container">
                             <nav>
-                                <div class="nav nav-tabs mt-2" id="nav-tab" role="tablist">
-                                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
-                                        data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                                        aria-selected="true">الكل
-                                    </button>
-                                    <!-- <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-                                aria-selected="false">منتج سهل
-                            </button>
-                            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
-                                aria-selected="false">Contact
-                            </button> -->
+                                <div class="nav nav-tabs g-danger " id="nav-tab" role="tablist">
+
+                                    <button class="nav-link  w-25" id="nav-stock-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-stock" type="button" role="tab" aria-controls="nav-stock"
+                                        aria-selected="true">المخزون</button>
+
+                                    <button class="nav-link active w-25" id="nav-selling-settings-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-selling-settings" type="button" role="tab"
+                                        aria-controls="nav-selling-settings" aria-selected="false">اعدادات
+                                        البيع</button>
+
+                                    <button class="nav-link w-25" id="nav-waiting-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-waiting" type="button" role="tab"
+                                        aria-controls="nav-waiting" aria-selected="false">في الانتظار</button>
+
                                 </div>
                             </nav>
+                            <div class="tab-content my-3" id="nav-tabContent">
 
-                            <div class="filter-categories ">
-                                <h6 class="my-3">الفئات</h6>
-                                <!-- ----------- library Swiper ---------------- -->
-                                <div class="swiper mySwiper">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <a href="#" class="btn btn-categories">الكل</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="btn btn-categories">فئة 1</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="btn btn-categories">فئة 2</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="btn btn-categories">فئة 3</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="btn btn-categories">فئة 4</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="btn btn-categories">فئة 5</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="btn btn-categories">فئة 6</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="btn btn-categories">فئة 7</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="btn btn-categories">فئة 8</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="btn btn-categories">فئة 9</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="btn btn-categories">فئة 10</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="btn btn-categories">فئة 11</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="btn btn-categories">فئة 12</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="btn btn-categories">فئة 13</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="btn btn-categories">فئة 14</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="btn btn-categories">فئة 15</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- --------------- dash all product ------------------- -->
-                            <div class="all-product">
-                                <div class="row justify-content-start gap-3 gx-1 ">
-                                    <div class="col-md-3 p-2 bg-white rounded-3  ">
-                                        <img src="assets/image/bg-2.jpg" class="rounded-3 w-100" style="height: 8rem;"
-                                            alt="...">
-                                        <div class="pt-3 px-2">
-                                            <h5 class="">ساعة ذكية</h5>
-                                            <h6 class="text-muted"><span>12</span> متاح في المخزن</h6>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <h5 class="d-flex align-items-center ">
-                                                    <span>150</span> ر.س
-                                                    <small class="fs-6 text-muted">/للقطعه</small>
-                                                </h5>
-                                                <a>
-                                                    <i class="fa-solid fa-cart-plus"></i>
-                                                </a>
+                                <div class="tab-pane fade  " id="nav-stock" role="tabpanel"
+                                    aria-labelledby="nav-stock-tab" tabindex="0">stock</div>
+
+
+                                <!-- --------------------- Start Selling settings ------------------------ -->
+                                <div class="tab-pane fade show active" id="nav-selling-settings" role="tabpanel"
+                                    aria-labelledby="nav-selling-settings-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div >
+                                                <label for="" class="d-block">خصم اضافي</label>
+                                                <input class="d-block w-100 p-1" type="number" name="" id="">
+                                                <small class="text-muted" >( 0$ )</small>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3 p-2 bg-white rounded-3  ">
-                                        <img src="assets/image/bg-2.jpg" class="rounded-3 w-100" style="height: 8rem;"
-                                            alt="...">
-                                        <div class="pt-3 px-2">
-                                            <h5 class="">ساعة ذكية</h5>
-                                            <h6 class="text-muted"><span>12</span> متاح في المخزن</h6>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <h5 class="d-flex align-items-center ">
-                                                    <span>150</span> ر.س
-                                                    <small class="fs-6 text-muted">/للقطعه</small>
-                                                </h5>
-                                                <a>
-                                                    <i class="fa-solid fa-cart-plus"></i>
-                                                </a>
+                                        <div class="col-md-6">
+                                            <div >
+                                                <label for="" class="d-block"> الشحن</label>
+                                                <input class="d-block w-100 p-1" type="number" name="" id="" >
+                                                <small class="text-muted" >( ضريبة$0 )</small>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3 p-2 bg-white rounded-3  ">
-                                        <img src="assets/image/bg-2.jpg" class="rounded-3 w-100" style="height: 8rem;"
-                                            alt="...">
-                                        <div class="pt-3 px-2">
-                                            <h5 class="">ساعة ذكية</h5>
-                                            <h6 class="text-muted"><span>12</span> متاح في المخزن</h6>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <h5 class="d-flex align-items-center ">
-                                                    <span>150</span> ر.س
-                                                    <small class="fs-6 text-muted">/للقطعه</small>
-                                                </h5>
-                                                <a>
-                                                    <i class="fa-solid fa-cart-plus"></i>
-                                                </a>
+
+                                        <div class="col-md-6">
+                                            <div >
+                                                <label for="" class="d-block"> عميل عملية الدفع <small class="text-muted"> بناء علي سوق العملات الحية .</small> </label>
+                                                <select class="w-100 p-1" aria-label="Default select example">
+                                                    <option selected>Default</option>
+                                                    <option value="1">Default</option>
+                                                    <option value="1">Default</option>
+                                                    <option value="1">Default</option>
+                                                </select>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3 p-2 bg-white rounded-3  ">
-                                        <img src="assets/image/bg-2.jpg" class="rounded-3 w-100" style="height: 8rem;"
-                                            alt="...">
-                                        <div class="pt-3 px-2">
-                                            <h5 class="">ساعة ذكية</h5>
-                                            <h6 class="text-muted"><span>12</span> متاح في المخزن</h6>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <h5 class="d-flex align-items-center ">
-                                                    <span>150</span> ر.س
-                                                    <small class="fs-6 text-muted">/للقطعه</small>
-                                                </h5>
-                                                <a>
-                                                    <i class="fa-solid fa-cart-plus"></i>
-                                                </a>
+
+                                        <div class="col-md-6">
+                                            <div >
+                                                <label for="" class="d-block">موظف</label>
+                                                <input class="d-block w-100 p-1" type="text" placeholder="Join" name="" id="">
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3 p-2 bg-white rounded-3  ">
-                                        <img src="assets/image/bg-2.jpg" class="rounded-3 w-100" style="height: 8rem;"
-                                            alt="...">
-                                        <div class="pt-3 px-2">
-                                            <h5 class="">ساعة ذكية</h5>
-                                            <h6 class="text-muted"><span>12</span> متاح في المخزن</h6>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <h5 class="d-flex align-items-center ">
-                                                    <span>150</span> ر.س
-                                                    <small class="fs-6 text-muted">/للقطعه</small>
-                                                </h5>
-                                                <a>
-                                                    <i class="fa-solid fa-cart-plus"></i>
-                                                </a>
+
+                                        <div class="col-md-6">
+                                            <div >
+                                                <label for="" class="d-block"> شروط الدفع </label>
+                                                <select class="w-100 p-1" aria-label="Default select example">
+                                                    <option selected>Default Term</option>
+                                                    <option value="1">Default</option>
+                                                    <option value="1">Default</option>
+                                                    <option value="1">Default</option>
+                                                </select>                                           
+                                             </div>
+                                        </div>
+                                        <hr class="my-4">
+                                        <div class="col-md-6">
+                                            <div >
+                                                <label for="" class="d-block"> رقم الفاتورة</label>
+                                                <input class="d-block w-100 p-1" type="number" value="119" name="" id="">
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3 p-2 bg-white rounded-3  ">
-                                        <img src="assets/image/bg-2.jpg" class="rounded-3 w-100" style="height: 8rem;"
-                                            alt="...">
-                                        <div class="pt-3 px-2">
-                                            <h5 class="">ساعة ذكية</h5>
-                                            <h6 class="text-muted"><span>12</span> متاح في المخزن</h6>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <h5 class="d-flex align-items-center ">
-                                                    <span>150</span> ر.س
-                                                    <small class="fs-6 text-muted">/للقطعه</small>
-                                                </h5>
-                                                <a>
-                                                    <i class="fa-solid fa-cart-plus"></i>
-                                                </a>
+
+                                        <div class="col-md-6">
+                                            <div >
+                                                <label for="" class="d-block">مرجع </label>
+                                                <input class="d-block w-100 p-1" type="number" name="" id="" placeholder="مرجع">
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3 p-2 bg-white rounded-3  ">
-                                        <img src="assets/image/bg-2.jpg" class="rounded-3 w-100" style="height: 8rem;"
-                                            alt="...">
-                                        <div class="pt-3 px-2">
-                                            <h5 class="">ساعة ذكية</h5>
-                                            <h6 class="text-muted"><span>12</span> متاح في المخزن</h6>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <h5 class="d-flex align-items-center ">
-                                                    <span>150</span> ر.س
-                                                    <small class="fs-6 text-muted">/للقطعه</small>
-                                                </h5>
-                                                <a>
-                                                    <i class="fa-solid fa-cart-plus"></i>
-                                                </a>
+
+                                        <div class="col-md-6">
+                                            <div >
+                                                <label for="" class="d-block"> تاريخ استحقاق الفاتورة</label>
+                                                <input class="d-block w-100 p-1" type="date" name="" id="">
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3 p-2 bg-white rounded-3  ">
-                                        <img src="assets/image/bg-2.jpg" class="rounded-3 w-100" style="height: 8rem;"
-                                            alt="...">
-                                        <div class="pt-3 px-2">
-                                            <h5 class="">ساعة ذكية</h5>
-                                            <h6 class="text-muted"><span>12</span> متاح في المخزن</h6>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <h5 class="d-flex align-items-center ">
-                                                    <span>150</span> ر.س
-                                                    <small class="fs-6 text-muted">/للقطعه</small>
-                                                </h5>
-                                                <a>
-                                                    <i class="fa-solid fa-cart-plus"></i>
-                                                </a>
+
+                                        <div class="col-md-6">
+                                            <div >
+                                                <label for="" class="d-block"> تاريخ الفاتورة</label>
+                                                <input class="d-block w-100 p-1" type="date" name="" id="">
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3 p-2 bg-white rounded-3  ">
-                                        <img src="assets/image/bg-2.jpg" class="rounded-3 w-100" style="height: 8rem;"
-                                            alt="...">
-                                        <div class="pt-3 px-2">
-                                            <h5 class="">ساعة ذكية</h5>
-                                            <h6 class="text-muted"><span>12</span> متاح في المخزن</h6>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <h5 class="d-flex align-items-center ">
-                                                    <span>150</span> ر.س
-                                                    <small class="fs-6 text-muted">/للقطعه</small>
-                                                </h5>
-                                                <a>
-                                                    <i class="fa-solid fa-cart-plus"></i>
-                                                </a>
+
+                                        <div class="col-md-6">
+                                            <div >
+                                                <label for="" class="d-block"> خصم</label>
+                                                <input class="d-block w-100 p-1" type="number" name="" id="" placeholder="--Discount % (after Tax)--">
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3 p-2 bg-white rounded-3  ">
-                                        <img src="assets/image/bg-2.jpg" class="rounded-3 w-100" style="height: 8rem;"
-                                            alt="...">
-                                        <div class="pt-3 px-2">
-                                            <h5 class="">ساعة ذكية</h5>
-                                            <h6 class="text-muted"><span>12</span> متاح في المخزن</h6>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <h5 class="d-flex align-items-center ">
-                                                    <span>150</span> ر.س
-                                                    <small class="fs-6 text-muted">/للقطعه</small>
-                                                </h5>
-                                                <a>
-                                                    <i class="fa-solid fa-cart-plus"></i>
-                                                </a>
+
+                                        <div class="col-md-6">
+                                            <div >
+                                                <label for="" class="d-block"> ضريبة</label>
+                                                <input class="d-block w-100 p-1" type="number" name="" id="" placeholder="-- Tax Exclusive--">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div >
+                                                <label for="" class="d-block"> ملاحظةالفاتورة</label>
+                                                <textarea class="w-100 p-1" id="" rows="2" >
+                                                </textarea>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- --------------------- End Selling settings ------------------------ -->
+
+
+                                <div class="tab-pane fade" id="nav-waiting" role="tabpanel"
+                                    aria-labelledby="nav-waiting-tab" tabindex="0">waiting</div>
+
                             </div>
-                            <hr>
-                            <section class=" pagination-prodact mt2" dir="ltr">
-                                <nav aria-label="Page navigation example">
-                                    <ul class="pagination">
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Next">
-                                                <span aria-hidden="true">&laquo;</span>
-                                            </a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Next">
-                                                <span aria-hidden="true"> &raquo; </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </section>
                         </div>
                     </div>
-                    <!-- ------------ End screan desplay all products ---------------------- -->
+                    <!-- ------------ End screan Extra settings ---------------------- -->
+
                 </div>
             </div>
 
@@ -816,6 +654,8 @@
     <!-- <br><br><br><br><br><br><br><br><br> -->
 
 
+
+
     <!-- --------------------- Swiper JS ---------------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- ------------------ bootstrap js ----------------------- -->
@@ -823,7 +663,6 @@
     <!-- ---------------- code custmaize slide js ----------------- -->
     <script src="assets/js/slide.js"></script>
     <sCript src="assets/js/main.js"></sCript>
-
 </body>
 
 </html>
