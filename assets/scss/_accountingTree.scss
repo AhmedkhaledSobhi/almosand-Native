@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    // font-family: sans-serif;
+}
+
+.sect-accounting-tree{
+    min-height: 100vh;
+    width: 27% !important;
+    // background-color: #05111b;
+    background-color: $gray;
+    // border: 0.5px solid ;
+
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+
+ul{
+    list-style-type: none;
+    // color: #888;
+    color: #000;
+
+}
+
+ul span.folder{
+    // color: #ccc ;
+    color: #000;
+
+    font: 1rem ;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+
+ul span.folder:hover,
+ul span.folder:hover::before ,
+ul span.folder:hover + ul.nested> li,
+ul span.folder:hover + ul.nested li::after,
+ul span.folder:hover + ul.nested ul.nested::before,
+ul span.folder:hover + ul.nested::before 
+{
+    color: $crimson;
+    border-color: $crimson;
+}
+
+ul.nested{
+    position: relative;
+    max-height: 0;
+    overflow: hidden;
+
+    transition: all .4s ease-in-out;
+}
+
+ul.nested::before{
+    position: absolute;
+    content: "";
+    right: 1.9%;
+   
+    width: 1.5rem;
+    height: 100%;
+    // border-right: 1.3px solid #00ff2a;
+    border-right: 1.3px solid $secandColor;
+    transition: all .2s ease-in-out;
+}
+
+ul.nested li{ 
+    position: relative;
+    padding-right: 2.5rem;
+    transition: all .2s ease-in-out;
+}
+
+ul.nested li::after{
+    position: absolute;
+    content: "";
+    right: 2.0%;
+    top: 0.32rem ;
+   
+    width: 1.5rem;
+    height: 1rem;
+    // border-bottom: 1.3px solid #00ff2a;
+    border-bottom: 1.3px solid $secandColor;
+
+    transition: all .2s ease-in-out;
+}
+
+ul span.folder::before,
+li.file-html::before,
+li.file-document-text::before,
+li.chart::before,
+li.key::before,
+li.img::before {
+    display: inline-block ;
+    margin-right: .01rem;
+    font: 1.5rem sans-serif;
+
+    transition: all .2s ease-in-out;
+}
+
+ul span.folder::before{
+    content: "🗀";
+    // color: #00ff20;
+    color: $maincolor;
+    margin-left: 0.5rem;
+}
+
+ul span.folder.active::before{
+    content: '🗁';
+}
+
+li.file-html::before{
+    content: '🖹';
+    color: yellow;
+    margin-left: 0.5rem;
+}
+
+li.key::before{
+    content: '🗝';
+    color: yellow;
+    transform: rotate(30deg) scaleX(-1);
+    margin-left: 0.5rem;
+}
+
+li.file-document-text::before{
+    content: '🗋';
+    color: deepskyblue;    
+    margin-left: 0.3rem;
+}
+
+li.chart::before{
+    content: '🗠';
+    color: deepskyblue;
+    margin-left: 0.5rem;
+}
+
+li.img::before{
+    content: '🖺';
+    color: #f800ff;
+    margin-left: 0.5rem;
+
+}
+
+
+
+
+
+
+
+

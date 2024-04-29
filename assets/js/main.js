@@ -1,7 +1,7 @@
-document.getElementById("addPaymentProcess").addEventListener("click", function() {
+document.getElementById("addPaymentProcess").addEventListener("click", function () {
     var newDiv = document.createElement("div");
     // Add content inside the new div
-    newDiv.innerHTML =` <hr>
+    newDiv.innerHTML = ` <hr>
     <div class="row">
         <div class="col-md-6">
             <div>
@@ -29,6 +29,18 @@ document.getElementById("addPaymentProcess").addEventListener("click", function(
 
 
 
-document.getElementById("addChild").appendChild(newDiv);
+    document.getElementById("addChild").appendChild(newDiv);
 });
 
+
+
+
+// const folders = document.querySelectorAll('.folder');
+
+// for (const folder of folders) {
+//     folder.onclick = () => {
+//         folder.classList.toggle('active');
+//         const target_list = folder.nextElementSibling;
+//         target_list.style.maxHeight = target_list.style.maxHeight ? null : "100vh";
+//     }
+// }
