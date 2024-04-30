@@ -1383,10 +1383,10 @@ ul.nested {
 ul.nested::before {
   position: absolute;
   content: "";
-  right: 1.9%;
+  right: 4.2%;
   width: 1.5rem;
-  height: 100%;
-  border-right: 1.3px solid #4a5057;
+  height: 100vh;
+  border-right: 1.9px solid #4a5057;
   transition: all 0.2s ease-in-out;
 }
 
@@ -1399,11 +1399,11 @@ ul.nested li {
 ul.nested li::after {
   position: absolute;
   content: "";
-  right: 2%;
+  right: 4.9%;
   top: 0.32rem;
   width: 1.5rem;
   height: 1rem;
-  border-bottom: 1.3px solid #4a5057;
+  border-bottom: 1.9px solid #4a5057;
   transition: all 0.2s ease-in-out;
 }
 
@@ -1423,6 +1423,7 @@ ul span.folder::before {
   content: "🗀";
   color: #ff7900;
   margin-left: 0.5rem;
+  font-weight: 800;
 }
 
 ul span.folder.active::before {
@@ -1446,6 +1447,7 @@ li.file-document-text::before {
   content: "🗋";
   color: deepskyblue;
   margin-left: 0.3rem;
+  font-weight: 800;
 }
 
 li.chart::before {
@@ -1458,6 +1460,62 @@ li.img::before {
   content: "🖺";
   color: #f800ff;
   margin-left: 0.5rem;
+}
+
+.screen-accounting-tree {
+  width: 72.9%;
+}
+.screen-accounting-tree .item-account-tree {
+  background-color: #EAECED;
+  border: 1px solid rgb(177, 177, 177);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem 0.5rem 0rem;
+  margin: 0.2rem auto;
+}
+.screen-accounting-tree .item-account-tree strong {
+  color: #ff7900;
+}
+.screen-accounting-tree .item-account-tree h6 {
+  color: #ff7900;
+}
+.screen-accounting-tree .item-account-tree:hover {
+  background-color: rgba(255, 121, 0, 0.35);
+}
+.screen-accounting-tree .add-Account {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin: 1rem;
+  padding: 5px;
+  color: #ff7900;
+  max-width: 9rem;
+  border: 0.25px solid #EAECED;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.screen-accounting-tree .add-Account:hover {
+  text-decoration: underline !important;
+  border-color: #ff7900;
+}
+.screen-accounting-tree .tab {
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+}
+.screen-accounting-tree .tab.active {
+  background-color: white;
+}
+.screen-accounting-tree .tab-content {
+  display: none;
+  border: 1px solid lightgray;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.screen-accounting-tree .tab-content.active {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

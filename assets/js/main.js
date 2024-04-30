@@ -1,3 +1,22 @@
+
+
+
+const folders = document.querySelectorAll('.folder');
+
+for (const folder of folders) {
+    folder.onclick = () => {
+        folder.classList.toggle('active');
+        const target_list = folder.nextElementSibling;
+        target_list.style.maxHeight = target_list.style.maxHeight ? null : "100vh";
+    }
+}
+
+
+
+
+
+
+
 document.getElementById("addPaymentProcess").addEventListener("click", function () {
     var newDiv = document.createElement("div");
     // Add content inside the new div
@@ -35,12 +54,4 @@ document.getElementById("addPaymentProcess").addEventListener("click", function 
 
 
 
-// const folders = document.querySelectorAll('.folder');
 
-// for (const folder of folders) {
-//     folder.onclick = () => {
-//         folder.classList.toggle('active');
-//         const target_list = folder.nextElementSibling;
-//         target_list.style.maxHeight = target_list.style.maxHeight ? null : "100vh";
-//     }
-// }

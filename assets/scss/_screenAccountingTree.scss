@@ -1,0 +1,72 @@
+.screen-accounting-tree {
+    width: 72.9%;
+    .item-account-tree {
+        background-color: $gray;
+        border: 1px solid rgb(177, 177, 177);
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem 0.5rem 0rem;
+        margin: 0.2rem auto;
+
+        strong {
+            color: $maincolor;
+        }
+
+        h6 {
+            color: $maincolor;
+        }
+
+        &:hover {
+            background-color: $theardColo;
+        }
+    }
+    .add-Account{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        margin: 1rem ;
+        padding: 5px;
+        color: $maincolor;
+        max-width: 9rem;
+        border: 0.25px solid $gray;
+        border-radius: 8px;
+        cursor:pointer;
+        &:hover{
+            text-decoration: underline !important;
+            border-color: $maincolor;
+        }
+    }
+
+    .tabs {
+        // display: flex;
+        // list-style-type: none;
+        // padding: 0;
+    }
+
+    .tab {
+        // margin-right: 10px;
+        cursor: pointer;
+        // padding: 5px 10px;
+        // background-color: lightgray;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .tab.active {
+        background-color: white;
+    }
+
+    .tab-content {
+        display: none;
+        // padding: 10px;
+        border: 1px solid lightgray;
+        border-top: none;
+        border-left:none ;
+        border-right: none;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
+}
