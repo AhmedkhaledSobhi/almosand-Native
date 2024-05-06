@@ -1,0 +1,49 @@
+// @page {
+//     size: 7.15in;
+//     margin: 0;
+// }
+
+.sect-invoice{
+    width: 23rem !important;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 25px 5px 0px ;
+    text-align: center;
+
+    .imgBox{
+        width: 200px;
+        border-radius: 5px;
+        max-height: 210px ;
+        margin: 10px auto  0px !important;
+        overflow: hidden;
+        transition:  all 1s;
+        img{
+            width: 100%;
+            padding: 10px;
+        }
+        &.show-img{
+            max-height: 300px;
+            margin: 10px auto;
+            border: 1px solid #d1d1d1 ;
+        }
+    }
+
+}
+
+
+@media print  {
+    .sect-invoice{
+        width: 30rem !important;
+        img{
+            width: 5rem !important;
+        }
+
+        .imgBox{
+            width: 110px !important;
+            img{
+                width: 100% !important;
+            }
+        }
+    }
+}

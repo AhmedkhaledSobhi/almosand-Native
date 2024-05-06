@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>invoice</title>
+    <!-- --------------------- this is fonts --------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Noto+Kufi+Arabic:wght@100..900&family=Readex+Pro:wght@160..700&display=swap"
+        rel="stylesheet">
+    <!-- ----------------- this is file style fontawesome icon ---------------------- -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- ----------------- this is file style bootstrap ---------------------- -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- ----------------- this is file style ---------------------- -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+    <section class="sect-invoice">
+
+        <div class="w-25 mx-auto ">
+            <img class="my-4" src="assets/image/1705773129ض.png" alt="">
+        </div>
+        <hr class="text-danger  m-2">
+        <div class="">
+            <h2>المساند</h2>
+            <p>الرياض</p>
+            <div class="px-4">
+                <div class="d-flex justify-content-between ">
+                    <strong class="text-">الرقم الضريبي :</strong>
+                    <Span>12563555</Span>
+                </div>
+                <div class=" d-flex justify-content-between ">
+                    <strong>جوال :</strong>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="text-danger  m-2">
+        
+        <div class="px-4">
+            <div class="d-flex justify-content-between">
+                <strong>رقم الفاتورة :</strong>
+                <span>inva</span>
+            </div>
+            <div class="d-flex justify-content-between">
+                <strong>تاريخ الفاتورة</strong>
+                <span>06-05-2024</span>
+            </div>
+            <div class="d-flex justify-content-between">
+                <strong> الزبون :</strong>
+                <span>Wallk-in</span>
+            </div>
+        </div>
+    
+        <div class="px-4 my-3">
+            <table class="table table-bordered table-striped">
+                <thead class=" table-dark">
+                    <tr>
+                        <th>وصف</th>
+                        <th>السعر</th>
+                        <th>الكمية</th>
+                        <th>الضريبة</th>
+                        <th>مجموع</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>تجربة</td>
+                        <td>g 100</td>
+                        <td>g 1</td>
+                        <td>g 0</td>
+                        <td>80.00</td>
+                    </tr>
+    
+                    <tr>
+                        <td>تجربة</td>
+                        <td>g 100</td>
+                        <td>g 1</td>
+                        <td>g 0</td>
+                        <td>80.00</td>
+                    </tr>
+                    <tr>
+                        <td>تجربة</td>
+                        <td>g 100</td>
+                        <td>g 1</td>
+                        <td>g 0</td>
+                        <td>80.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+       
+        <hr class="text-danger m-2">
+
+        <div class="px-4">
+            <div class="d-flex justify-content-between">
+                <strong>المجموع غير شامل الضريبة :</strong>
+                <span> 0.00 <Small> $ </Small> </span>
+            </div>
+            <div class="d-flex justify-content-between">
+                <strong>ضريبة :</strong>
+                <span> 0.00 <Small> $ </Small> </span>
+            </div>
+            <div class="d-flex justify-content-between">
+                <strong> خصم :</strong>
+                <span> 0.00 <Small> $ </Small> </span>
+            </div>
+            <div class="d-flex justify-content-between">
+                <strong> المجوع شامل الضريبة :</strong>
+                <span> 0.00 <Small> $ </Small> </span>
+            </div>
+        </div>
+        <hr class="text-danger m-2">
+
+        <div class="d-flex flex-column">
+            <small>شكرا العمل معنا</small>
+            <small id="dateTime"></small>
+            <div class="">
+                <small>المسح و الطبع</small>
+                <div class="qr-code">
+                    <div id="imgBox" class="imgBox">
+                        <img src="" alt="" id="qrImage">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+    </section>
+
+    <br><br>
+
+    <script>
+        var currentDate =new Date();
+        var formattedDAte = currentDate .toLocaleString();
+        document.getElementById('dateTime').innerHTML = formattedDAte;
+        // ===============================
+       
+        // Function to generate QR code dynamically
+        let imgBox =document.getElementById("imgBox");
+        let qrText ="https://getbootstrap.com/docs/5.3/content/tables/#overview";
+        let qrImage = document.getElementById("qrImage");
+        (()=>{
+            qrImage.src= "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +qrText;
+            imgBox.classList.add("show-img")
+        })()
+            
+    </script>
+
+    <!-- ------------------ bootstrap js ----------------------- -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- ---------------- code custmaize slide js ----------------- -->
+    <script src="assets/js/slide.js"></script>
+    <sCript src="assets/js/main.js"></sCript>
+</body>
+</html>

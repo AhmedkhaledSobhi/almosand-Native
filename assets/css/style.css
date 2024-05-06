@@ -1518,4 +1518,45 @@ li.img::before {
   display: block;
 }
 
+.sect-invoice {
+  width: 23rem !important;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 25px 5px 0px;
+  text-align: center;
+}
+.sect-invoice .imgBox {
+  width: 200px;
+  border-radius: 5px;
+  max-height: 210px;
+  margin: 10px auto 0px !important;
+  overflow: hidden;
+  transition: all 1s;
+}
+.sect-invoice .imgBox img {
+  width: 100%;
+  padding: 10px;
+}
+.sect-invoice .imgBox.show-img {
+  max-height: 300px;
+  margin: 10px auto;
+  border: 1px solid #d1d1d1;
+}
+
+@media print {
+  .sect-invoice {
+    width: 30rem !important;
+  }
+  .sect-invoice img {
+    width: 5rem !important;
+  }
+  .sect-invoice .imgBox {
+    width: 110px !important;
+  }
+  .sect-invoice .imgBox img {
+    width: 100% !important;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
