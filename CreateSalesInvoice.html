@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Table</title>
+    <!-- --------------------- this is fonts --------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Noto+Kufi+Arabic:wght@100..900&family=Readex+Pro:wght@160..700&display=swap"
+        rel="stylesheet">
+
+    <!-- ----------------- this is file style fontawesome icon ---------------------- -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- ----------------- this is file style bootstrap ---------------------- -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- ----------------- this is file style ---------------------- -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 cmp-pnl">
+                    <div id="customerpanel" class="inner-cmp-pnl">
+                        <div class="form-group row">
+                            <div class="fcol-sm-12">
+                                <h3 class="title">فاتورة الى <a href="#" class="btn btn-primary btn-sm round"
+                                        data-toggle="modal" data-target="#addCustomer">
+                                        إضافة عميل
+                                    </a>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="frmSearch col-sm-12">
+                                <label for="cst" class="caption">البحث عن عميل</label>
+                                <input class="form-control round"
+                                    placeholder="أدخل اسم العميل أو رقم الهاتف المحمول للبحث" id="customer-box"
+                                    autocomplete="off" name="cst" type="text">
+                                <div id="customer-box-result"></div>
+                            </div>
+                        </div>
+                        <div id="customer">
+                            <div class="clientinfo">تفاصيل العميل
+                                <hr>
+                                <div id="customer_name"></div>
+                            </div>
+                            <div class="clientinfo">
+                                <div id="customer_address1"></div>
+                            </div>
+                            <div class="clientinfo">
+                                <div id="customer_phone"></div>
+                            </div>
+                            <hr>
+                            <div id="customer_pass"></div>
+                            <hr>
+                        </div>مستودع<select id="s_warehouses" class="form-control round mt-1">
+                            <option value="0">الكل</option>
+                            <option value="9" selected="">Default Product Warehouse</option>
+                        </select>
+
+
+                        <input id="customer_id" name="customer_id" type="hidden" value="0">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 cmp-pnl">
+                    <div class="inner-cmp-pnl">
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <h3 class="title">خصائص الفاتورة</h3>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="icon-file-text-o"
+                                            aria-hidden="true"></span>
+                                    </div>
+                                    <input class="form-control rounded-start rounded-end-0 " placeholder="#طلب"
+                                        id="order_id" name="order_id" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6"><label for="invocieno" class="caption">رقم الفاتورة</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="icon-file-text-o"
+                                            aria-hidden="true"></span>
+                                    </div>
+                                    <input class="form-control round" placeholder="رقم الفاتورة" name="tid"
+                                        type="number" value="39">
+                                </div>
+                            </div>
+                            <div class="col-sm-6"><label for="invocieno" class="caption">مرجع</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="icon-bookmark-o"
+                                            aria-hidden="true"></span>
+                                    </div>
+                                    <input class="form-control rounded-start rounded-end-0" placeholder="مرجع"
+                                        name="refer" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6"><label for="invociedate" class="caption">تاريخ الفاتورة</label>
+
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="icon-calendar4"
+                                            aria-hidden="true"></span>
+                                    </div>
+                                    <input class="form-control round required" placeholder="invoices.invoicedate"
+                                        data-toggle="datepicker" autocomplete="false" name="invoicedate" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-6"><label for="invocieduedate" class="caption">تاريخ استحقاق
+                                    الفاتورة</label>
+
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="icon-calendar-o"
+                                            aria-hidden="true"></span>
+                                    </div>
+
+                                    <input class="form-control rounded-start rounded-end-0  required"
+                                        placeholder="invoices.invoicedate" data-toggle="datepicker" autocomplete="false"
+                                        name="invoiceduedate" type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <label for="taxFormat" class="caption">ضريبة</label>
+                                <select class="form-control round" onchange="changeTaxFormat()" id="taxFormat">
+                                    <option value="14.00" data-type1="%" data-type2="exclusive" data-type3="exclusive"
+                                        data-type4="82">Tax Exclusive</option>
+                                    <option value="0.00" data-type1="%" data-type2="inclusive" data-type3="inclusive"
+                                        data-type4="84" selected="">--Tax Inclusive--</option>
+                                    <option value="0.00" data-type1="%" data-type2="inclusive" data-type3="inclusive"
+                                        data-type4="84">Tax Inclusive</option>
+
+                                    <option value="10.70" data-type1="%" data-type2="exclusive" data-type3="exclusive"
+                                        data-type4="88">VAT 10%</option>
+
+                                    <option value="14.00" data-type1="%" data-type2="exclusive" data-type3="cgst"
+                                        data-type4="89">CGST + SGST 14%</option>
+
+                                    <option value="4.00" data-type1="%" data-type2="exclusive" data-type3="igst"
+                                        data-type4="90">IGST 4%</option>
+
+                                    <option value="0" data-type1="%" data-type2="off" data-type3="off">إيقاف</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="discountFormat" class="caption">خصم</label>
+                                    <select class="form-control round" onchange="changeDiscountFormat()"
+                                        id="discountFormat">
+
+                                        <option value="0.00" data-type1="%" data-type2="exclusive"
+                                            data-type3="exclusive" selected="">--Discount % (after Tax) --</option>
+                                        <option value="0.00" data-type1="%" data-type2="exclusive"
+                                            data-type3="exclusive">Discount % (after Tax) </option>
+
+                                        <option value="0.00" data-type1="flat" data-type2="exclusive"
+                                            data-type3="exclusive">Discount flat (after Tax) </option>
+                                        <option value="0.00" data-type1="b_flat" data-type2="exclusive"
+                                            data-type3="exclusive">Discount flat (before Tax) </option>
+                                        <option value="0.00" data-type1="b_per" data-type2="exclusive"
+                                            data-type3="exclusive">Discount % (before Tax) </option>
+
+
+
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <label for="toAddInfo" class="caption">ملاحظة الفاتورة</label>
+                                <textarea class="form-control round" placeholder="ملاحظة الفاتورة" rows="2" name="notes"
+                                    cols="50"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="table-responsive">
+        <table class="tfr my_stripe">
+            <thead>
+                <tr class="item_header bg-gradient-directional-blue white">
+                    <th width="30%" class="text-center"> اسم العنصر </th>
+                    <th width="8%" class="text-center"> كمية </th>
+                    <th width="10%" class="text-center"> معدل </th>
+                    <th width="10%" class="text-center"> ضريبة(٪) </th>
+                    <th width="5%" class="text-center"> ضريبة </th>
+                    <th width="15%" class="text-center"> خصم </th>
+                    <th width="10%" class="text-center"> الاجمالي ($) اجراء </th>
+                </tr>
+            </thead>
+            <tbody id="invoice-body">
+                <tr class="my-5">
+                    <td class="px-2">
+                        <input type="text" class="form-control" name="product_name[]" placeholder=" أدخل اسم المنتج "
+                            id="productname-0">
+                    </td>
+                    <td class="px-2">
+                        <input type="text" class="form-control req amnt" name="product_qty[]" id="amount-0"
+                            onkeypress="return isNumber(event)" onkeyup="rowTotal(0), billUpyog()" autocomplete="off"
+                            value="1">
+                        <input type="hidden" id="alert-0" value="" name="alert[]">
+                    </td>
+                    <td class="px-2">
+                        <input type="text" class="form-control req prc" name="product_price[]" id="price-0"
+                            onkeypress="return isNumber(event)" onkeyup="rowTotal(0), billUpyog()" autocomplete="off">
+                    </td>
+                    <td class="px-2">
+                        <input type="text" class="form-control vat" name="product_tax[]" id="vat-0"
+                            onkeypress="return isNumber(event)" onkeyup="rowTotal(0), billUpyog()" autocomplete="off">
+                    </td>
+                    <td class="text-center" id="texttaxa-0">0</td>
+                    <td class="px-2">
+                        <input type="text" class="form-control discount" name="product_discount[]"
+                            onkeypress="return isNumber(event)" id="discount-0" onkeyup="rowTotal(0), billUpyog()"
+                            autocomplete="off">
+                    </td>
+                    <td class="text-center px-2">
+                        <span class="currenty">$</span>
+                        <strong><span class='ttlText' id="result-0">0</span></strong>
+                    </td>
+                    <td class="text-center"></td>
+                    <input type="hidden" name="total_tax[]" id="taxa-0" value="0">
+                    <input type="hidden" name="total_discount[]" id="disca-0" value="0">
+                    <input type="hidden" class="ttInput" name="product_subtotal[]" id="total-0" value="0">
+                    <input type="hidden" class="pdIn" name="product_id[]" id="pid-0" value="0">
+                    <input type="hidden" name="unit[]" id="unit-0" value="">
+                    <input type="hidden" name="code[]" id="hsn-0" value="">
+                </tr>
+                <tr class="my-2">
+                    <td colspan="6">
+                        <textarea id="dpid-0" class="form-control html_editor" name="product_description[]"
+                            placeholder="" autocomplete="off"></textarea><br>
+                    </td>
+                    <td colspan="2">
+                        <select class="form-control unit" data-uid="0" name="u_m[]" style="display: none">
+
+                        </select>
+                    </td>
+                </tr>
+                <tr class="last-item-row sub_c">
+                    <td class="add-row d-flex flex-column w-100" colspan="12">
+                        <button type="button" class="btn btn-success" aria-label="Left Align" id="addproduct">
+                            اضف سطر <i class="fa fa-plus-square"></i>
+                        </button>
+                        <label for="serial_mode" class="form-check-label">
+                            <input type="checkbox" value="1" class="form-check-inline" name="serial_mode"
+                                id="serial_mode">
+                            <span>البحث عن المنتجات فقط بالأرقام التسلسلية</span>
+                        </label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+
+                <hr class="px-1 w-100">
+                <div class=" ">
+                    <div class="row justify-content-center">
+                        <div class="col-md-7 mb-2">
+                            <div class=" d-flex justify-content-between">
+                                <div>
+                                    <h4>
+                                        <input id="subttlform" name="subtotal" type="hidden" value="0">
+                                        <strong>مجموع الضريبة</strong>
+                                    </h4>
+                                    <span class="mx-5">
+                                        <span class="currenty lightMode">$</span>
+                                        <span id="taxr" class="lightMode">0</span>
+                                    </span>
+                                </div>
+                                <div>
+                                    <h4>
+                                        <strong>إجمالي الخصم</strong>
+                                    </h4>
+                                    <span class="mx-3">
+                                        <span class="currenty lightMode"></span>
+                                        <span id="discs" class="lightMode">0</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ------- Start موظف --- -->
+                        <div class="col-md-6">
+                            <div class="mb-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class=" w-100">
+
+                <div class="col-md-6">
+                    <div class="mb-1">
+                        <label>الشحن</label>
+                        <input type="text" class="form-control shipVal" onkeypress="return isNumber(event)"
+                            placeholder="Value" name="shipping" autocomplete="off" onkeyup="billUpyog()">
+                        (&nbsp; $<span id="ship_final">0</span> ضريبة <label for="ship_tax_toggle"
+                            class="form-check-label"> <input type="checkbox" value="1" class="form-check-inline"
+                                name="ship_tax_toggle" id="ship_tax_toggle"></label>)
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-1">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-1">
+                        <label> خصم اضافي</label>
+                        <input type="text" class="form-control discVal" onkeypress="return isNumber(event)"
+                            placeholder="Value" name="discount_rate" autocomplete="off" value="0" onkeyup="billUpyog()">
+                        <input type="hidden" name="after_disc" id="after_disc" value="0">
+                        ( $
+                        <span id="disc_final">0</span> )
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-1">
+                        <label for=""> عميل عملة الدفع <small>بناء على سوق العملات الحية</small></label>
+                        <select class="form-control" name="currency">
+                            <option value="0"> Default </option>
+                            <option value="11">
+                                $ - USD
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-1">
+                        <label for="invoiceyoghtml">المبلغ الإجمالي
+                            (<span class="currenty lightMode">$</span>)
+                        </label>
+                        <input type="text" name="total" class="form-control" id="invoiceyoghtml" readonly="">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-1">
+                        <label class=""> شروط الدفع </label>
+                        <select class="form-control selectpicker" name="term_id">
+                            <option value="15">Default Term</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-1">
+                        <label class="" for="nameUser"> Market Channel </label>
+                        <select class="form-control selectpicker" name="sales_channel">
+                            <option value="0" selected=""> --- </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="w-75 mx-auto mb-1">
+                        <br>
+                        <input type="submit" class="w-100 btn btn-success sub-btn btn-lg" value="انشاء" id="submit-data"
+                            data-loading-text="Creating...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/scriptInvoice.js"></script>
+</body>
+
+</html>
+
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,143 +14,202 @@
     <!-- ----------------- this is file style fontawesome icon ---------------------- -->
     <link rel="stylesheet" href="assets/css/all.min.css">
     <!-- ----------------- this is file style bootstrap ---------------------- -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
     <!-- ----------------- this is file style ---------------------- -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
 
 </head>
+
 <body>
-    <section class="sect-invoice">
 
-        <div class="w-25 mx-auto ">
-            <img class="my-4" src="assets/image/1705773129ض.png" alt="">
-        </div>
-        <hr class="text-danger  m-2">
-        <div class="">
-            <h2>المساند</h2>
-            <p>الرياض</p>
-            <div class="px-4">
-                <div class="d-flex justify-content-between ">
-                    <strong class="text-">الرقم الضريبي :</strong>
-                    <Span>12563555</Span>
-                </div>
-                <div class=" d-flex justify-content-between ">
-                    <strong>جوال :</strong>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-        
-        <hr class="text-danger  m-2">
-        
-        <div class="px-4">
-            <div class="d-flex justify-content-between">
-                <strong>رقم الفاتورة :</strong>
-                <span>inva</span>
-            </div>
-            <div class="d-flex justify-content-between">
-                <strong>تاريخ الفاتورة</strong>
-                <span>06-05-2024</span>
-            </div>
-            <div class="d-flex justify-content-between">
-                <strong> الزبون :</strong>
-                <span>Wallk-in</span>
-            </div>
-        </div>
-    
-        <div class="px-4 my-3">
-            <table class="table table-bordered table-striped">
-                <thead class=" table-dark">
-                    <tr>
-                        <th>وصف</th>
-                        <th>السعر</th>
-                        <th>الكمية</th>
-                        <th>الضريبة</th>
-                        <th>مجموع</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>تجربة</td>
-                        <td>g 100</td>
-                        <td>g 1</td>
-                        <td>g 0</td>
-                        <td>80.00</td>
-                    </tr>
-    
-                    <tr>
-                        <td>تجربة</td>
-                        <td>g 100</td>
-                        <td>g 1</td>
-                        <td>g 0</td>
-                        <td>80.00</td>
-                    </tr>
-                    <tr>
-                        <td>تجربة</td>
-                        <td>g 100</td>
-                        <td>g 1</td>
-                        <td>g 0</td>
-                        <td>80.00</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-       
-        <hr class="text-danger m-2">
 
-        <div class="px-4">
-            <div class="d-flex justify-content-between">
-                <strong>المجموع غير شامل الضريبة :</strong>
-                <span> 0.00 <Small> $ </Small> </span>
-            </div>
-            <div class="d-flex justify-content-between">
-                <strong>ضريبة :</strong>
-                <span> 0.00 <Small> $ </Small> </span>
-            </div>
-            <div class="d-flex justify-content-between">
-                <strong> خصم :</strong>
-                <span> 0.00 <Small> $ </Small> </span>
-            </div>
-            <div class="d-flex justify-content-between">
-                <strong> المجوع شامل الضريبة :</strong>
-                <span> 0.00 <Small> $ </Small> </span>
-            </div>
-        </div>
-        <hr class="text-danger m-2">
+    <section id="printableArea">
+        <div class="sect-invoice">
 
-        <div class="d-flex flex-column">
-            <small>شكرا العمل معنا</small>
-            <small id="dateTime"></small>
             <div class="">
-                <small>المسح و الطبع</small>
-                <div class="qr-code">
-                    <div id="imgBox" class="imgBox">
-                        <img src="" alt="" id="qrImage">
+                <img class="" src="assets/image/1705773129ض.png" alt="">
+            </div>
+            <hr class="text-danger">
+            <div class="">
+                <div class="">
+                    <h2>المساند</h2>
+                    <p>الرياض</p>
+                </div>
+                <div class="px-4">
+                    <div class="d-flex  ">
+                        <strong class="text-">الرقم الضريبي :</strong>
+                        <Span>12563555</Span>
+                    </div>
+                    <div class=" d-flex">
+                        <strong>جوال :</strong>
+                        <span></span>
                     </div>
                 </div>
             </div>
+    
+            <hr class="text-danger">
+    
+            <div class="px-4">
+                <div class="d-flex">
+                    <strong>رقم الفاتورة :</strong>
+                    <span>inva</span>
+                </div>
+                <div class="d-flex">
+                    <strong>تاريخ الفاتورة</strong>
+                    <span>06-05-2024</span>
+                </div>
+                <div class="d-flex">
+                    <strong> الزبون :</strong>
+                    <span>Wallk-in</span>
+                </div>
+            </div>
+    
+            <div class="cont-table px-4 my-3">
+                <table class="table table-bordered ">
+                    <thead class=" table-dark">
+                        <tr>
+                            <th>وصف</th>
+                            <th>السعر</th>
+                            <th>الكمية</th>
+                            <th>الضريبة</th>
+                            <th>مجموع</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>تجربة</td>
+                            <td>g 100</td>
+                            <td>g 1</td>
+                            <td>g 0</td>
+                            <td>80.00</td>
+                        </tr>
+    
+                        <tr>
+                            <td>تجربة</td>
+                            <td>g 100</td>
+                            <td>g 1</td>
+                            <td>g 0</td>
+                            <td>80.00</td>
+                        </tr>
+                        <tr>
+                            <td>تجربة</td>
+                            <td>g 100</td>
+                            <td>g 1</td>
+                            <td>g 0</td>
+                            <td>80.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <hr class="text-danger">
+    
+            <div class="px-4">
+                <div class="d-flex">
+                    <strong>المجموع غير شامل الضريبة :</strong>
+                    <span> 0.00 <Small> $ </Small> </span>
+                    <a href=""></a>
+                </div>
+                <div class="d-flex">
+                    <strong>ضريبة :</strong>
+                    <span> 0.00 <Small> $ </Small> </span>
+                </div>
+                <div class="d-flex">
+                    <strong> خصم :</strong>
+                    <span> 0.00 <Small> $ </Small> </span>
+                </div>
+                <div class="d-flex">
+                    <strong> المجوع شامل الضريبة :</strong>
+                    <span> 0.00 <Small> $ </Small> </span>
+                </div>
+            </div>
+            <hr class="text-danger">
+    
+            <div class="d-flex flex-column">
+                <small>شكرا العمل معنا</small>
+                <small id="dateTime"></small>
+                <div class="">
+                    <!-- <small>المسح و الطبع</small> -->
+                    <strong>Scan QR Code</strong>
+    
+                    <div class="qr-code">
+                        <div id="imgBox" class="imgBox">
+                            <img src="" alt="" id="qrImage">
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <br>
+    
         </div>
-
-        <br>
     </section>
+   
+
+    <button onclick="printDiv('printableArea')">Print</button>
+
+
+    <img src="1700422476wjrJmly9Aj.ico" alt="">
+
 
     <br><br>
 
+
+
     <script>
-        var currentDate =new Date();
-        var formattedDAte = currentDate .toLocaleString();
-        document.getElementById('dateTime').innerHTML = formattedDAte;
-        // ===============================
-       
-        // Function to generate QR code dynamically
-        let imgBox =document.getElementById("imgBox");
-        let qrText ="https://getbootstrap.com/docs/5.3/content/tables/#overview";
-        let qrImage = document.getElementById("qrImage");
-        (()=>{
-            qrImage.src= "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +qrText;
-            imgBox.classList.add("show-img")
-        })()
-            
+        document.addEventListener("DOMContentLoaded", function() {
+            var currentDate = new Date();
+            var formattedDate = currentDate.toLocaleString();
+            document.getElementById('dateTime').innerHTML = formattedDate;
+
+            let imgBox = document.getElementById("imgBox");
+            let qrImage = document.getElementById("qrImage");
+            // let qrText = {
+            //     name: "supports",
+            //     taxNumber: '2556',
+            //     invoiceTime: formattedDate,
+            //     totalInvoice: '25',
+            //     totalTax: '55',
+            // };
+
+            let qrText = 'https://chatgpt.com/c/a1349235-5d9c-4788-95a7-7d401074526e';
+            qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(JSON.stringify(qrText));
+            imgBox.classList.add("show-img");
+        });
+
+        function printDiv(divId) {
+            var divToPrint = document.getElementById(divId);
+            var newWin = window.open('','width=600,height=400');
+            newWin.document.open();
+            newWin.document.write('<html><head><title>Print</title>');
+            newWin.document.write('<style>');
+            newWin.document.write('body { margin: 0; padding: 0; direction: rtl;} ');
+            newWin.document.write('@page { size: 7.15in; margin: 0; }');
+            newWin.document.write('body { margin: 0; padding: 0; background-color: #fff; } ');
+            newWin.document.write('#printableArea { width: 100%; box-shadow: none; border: none; padding: 0; } ');
+            newWin.document.write('.sect-invoice { width: 23rem !important; margin: auto; border: 1px solid black; border-radius: 6px; padding: 25px 5px 0px; text-align: center; } ');
+            newWin.document.write('.sect-invoice .imgBox { width: 200px; border-radius: 5px; max-height: 210px; margin: 10px auto 0px !important; overflow: hidden; transition: all 1s; } ');
+            newWin.document.write('.sect-invoice .imgBox img { width: 100%; padding: 10px; } ');
+            newWin.document.write('.sect-invoice .imgBox.show-img { max-height: 300px; margin: 10px auto; border: 1px solid #d1d1d1; } ');
+            newWin.document.write('.sect-invoice h2, .sect-invoice p, .sect-invoice strong, .sect-invoice span, .sect-invoice small { text-align: center; direction: rtl; } ');
+            newWin.document.write('.table { display: table; box-sizing: border-box; text-indent: initial; unicode-bidi: isolate; border-spacing: 2px; caption-side: bottom; border-collapse: collapse; --bs-table-color-type: initial; --bs-table-bg-type: initial; --bs-table-color-state: initial; --bs-table-bg-state: initial; --bs-table-color: var(--bs-emphasis-color); --bs-table-bg: var(--bs-body-bg); --bs-table-border-color: var(--bs-border-color); --bs-table-accent-bg: transparent; --bs-table-striped-color: var(--bs-emphasis-color); --bs-table-striped-bg: rgba(var(--bs-emphasis-color-rgb), 0.05); --bs-table-active-color: var(--bs-emphasis-color); --bs-table-active-bg: rgba(var(--bs-emphasis-color-rgb), 0.1); --bs-table-hover-color: var(--bs-emphasis-color); --bs-table-hover-bg: rgba(var(--bs-emphasis-color-rgb), 0.075); width: 100%; margin-bottom: 1rem; vertical-align: top; }')
+            newWin.document.write('.table-bordered td, .table-bordered th{ border: 1px solid #000;}')
+            newWin.document.write('.d-flex { display: flex !important; justify-content: space-between!important; }')
+            newWin.document.write('.flex-column {flex-direction: column !important;}')
+            newWin.document.write('.px-4 { padding-right: 1.5rem !important; padding-left: 1.5rem !important;}')
+            newWin.document.write('p { margin-top: 0; margin-bottom: 1rem;}')
+            newWin.document.write('.my-3 {margin-top: 1rem !important;margin-bottom: 1rem !important;}')
+
+
+            newWin.document.write('</style>');
+            newWin.document.write('</head><body>');
+            newWin.document.write(divToPrint.innerHTML);
+            newWin.document.write('</body></html>');
+            newWin.document.close();
+            newWin.print();
+            newWin.close();
+        }
     </script>
 
     <!-- ------------------ bootstrap js ----------------------- -->
@@ -157,5 +217,8 @@
     <!-- ---------------- code custmaize slide js ----------------- -->
     <script src="assets/js/slide.js"></script>
     <sCript src="assets/js/main.js"></sCript>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/instascan/1.0.1/instascan.min.js"></script> -->
+
 </body>
+
 </html>

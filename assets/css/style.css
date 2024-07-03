@@ -1518,6 +1518,23 @@ li.img::before {
   display: block;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+
+#printableArea {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 0 auto;
+  width: 80%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .sect-invoice {
   width: 23rem !important;
   margin: auto;
@@ -1526,6 +1543,7 @@ li.img::before {
   padding: 25px 5px 0px;
   text-align: center;
 }
+
 .sect-invoice .imgBox {
   width: 200px;
   border-radius: 5px;
@@ -1534,28 +1552,339 @@ li.img::before {
   overflow: hidden;
   transition: all 1s;
 }
+
 .sect-invoice .imgBox img {
   width: 100%;
   padding: 10px;
 }
+
+.text-danger {
+  --bs-text-opacity: 1;
+  color: rgba(220, 53, 69, var(--bs-text-opacity)) !important;
+  margin: 0.5rem !important;
+}
+
+.px-4 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.my-3 {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+:root {
+  --bs-emphasis-color: #000;
+  --bs-body-bg: #fff;
+  --bs-border-color: #000;
+  --bs-table-border-color: var(--bs-border-color);
+}
+
+.table {
+  display: table;
+  box-sizing: border-box;
+  text-indent: initial;
+  unicode-bidi: isolate;
+  border-spacing: 2px;
+  caption-side: bottom;
+  border-collapse: collapse;
+  --bs-table-color-type: initial;
+  --bs-table-bg-type: initial;
+  --bs-table-color-state: initial;
+  --bs-table-bg-state: initial;
+  --bs-table-color: var(--bs-emphasis-color);
+  --bs-table-bg: var(--bs-body-bg);
+  --bs-table-border-color: var(--bs-border-color);
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: var(--bs-emphasis-color);
+  --bs-table-striped-bg: rgba(var(--bs-emphasis-color-rgb), 0.05);
+  --bs-table-active-color: var(--bs-emphasis-color);
+  --bs-table-active-bg: rgba(var(--bs-emphasis-color-rgb), 0.1);
+  --bs-table-hover-color: var(--bs-emphasis-color);
+  --bs-table-hover-bg: rgba(var(--bs-emphasis-color-rgb), 0.075);
+  width: 100%;
+  margin-bottom: 1rem;
+  vertical-align: top;
+}
+
+.table > thead {
+  vertical-align: bottom;
+}
+
+.table-dark {
+  --bs-table-bg: #212529;
+  --bs-table-border-color: #4d5154;
+  --bs-table-striped-bg: #2c3034;
+  --bs-table-striped-color: #fff;
+  --bs-table-active-bg: #373b3e;
+  --bs-table-active-color: #fff;
+  --bs-table-hover-bg: #323539;
+  --bs-table-hover-color: #fff;
+  color: var(--bs-table-color);
+  border-color: var(--bs-table-border-color);
+}
+
+.table-bordered td, .table-bordered th {
+  border: 1px solid #000;
+}
+
+thead {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  unicode-bidi: isolate;
+}
+
 .sect-invoice .imgBox.show-img {
   max-height: 300px;
   margin: 10px auto;
   border: 1px solid #d1d1d1;
 }
 
+.sect-invoice h2, .sect-invoice p, .sect-invoice strong, .sect-invoice span, .sect-invoice small {
+  text-align: center;
+  direction: rtl;
+}
+
+.d-flex {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+@page {
+  size: 7.15in;
+  margin: 0;
+}
 @media print {
-  .sect-invoice {
-    width: 30rem !important;
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
   }
-  .sect-invoice img {
-    width: 5rem !important;
+  #printableArea {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 0 auto;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .sect-invoice {
+    width: 23rem !important;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 25px 5px 0px;
+    text-align: center;
   }
   .sect-invoice .imgBox {
-    width: 110px !important;
+    width: 200px;
+    border-radius: 5px;
+    max-height: 210px;
+    margin: 10px auto 0px !important;
+    overflow: hidden;
+    transition: all 1s;
   }
   .sect-invoice .imgBox img {
+    width: 100%;
+    padding: 10px;
+  }
+  .text-danger {
+    --bs-text-opacity: 1;
+    color: rgba(220, 53, 69, var(--bs-text-opacity)) !important;
+    margin: 0.5rem !important;
+  }
+  .px-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
+  .my-3 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  :root {
+    --bs-emphasis-color: #000;
+    --bs-body-bg: #fff;
+    --bs-border-color: #dee2e6;
+  }
+  .table {
+    caption-side: bottom;
+    border-collapse: collapse;
+    --bs-table-color-type: initial;
+    --bs-table-bg-type: initial;
+    --bs-table-color-state: initial;
+    --bs-table-bg-state: initial;
+    --bs-table-color: var(--bs-emphasis-color);
+    --bs-table-bg: var(--bs-body-bg);
+    --bs-table-border-color: var(--bs-border-color);
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: var(--bs-emphasis-color);
+    --bs-table-striped-bg: rgba(var(--bs-emphasis-color-rgb), 0.05);
+    --bs-table-active-color: var(--bs-emphasis-color);
+    --bs-table-active-bg: rgba(var(--bs-emphasis-color-rgb), 0.1);
+    --bs-table-hover-color: var(--bs-emphasis-color);
+    --bs-table-hover-bg: rgba(var(--bs-emphasis-color-rgb), 0.075);
+    width: 100%;
+    margin-bottom: 1rem;
+    vertical-align: top;
+    border-color: var(--bs-table-border-color);
+  }
+  .sect-invoice .imgBox.show-img {
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+  }
+  .sect-invoice h2, .sect-invoice p, .sect-invoice strong, .sect-invoice span, .sect-invoice small {
+    text-align: center;
+    direction: rtl;
+  }
+  .d-flex {
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+  .flex-column {
+    flex-direction: column !important;
+  }
+}
+@media (max-width: 768px) {
+  .sect-invoice {
     width: 100% !important;
+  }
+  .sect-invoice .cont-table {
+    padding: 0px 5px !important;
+  }
+}
+/* CSS styles */
+/* body {
+    font-family: Arial, sans-serif  !important;
+} */
+.table-responsive {
+  width: 100% !important;
+  overflow-x: auto !important;
+}
+
+.tfr {
+  width: 100% !important;
+  border-collapse: collapse !important;
+}
+
+.my_stripe tbody tr:nth-child(odd) {
+  background-color: #f9f9f9 !important;
+}
+
+.item_header {
+  background-color: #004085 !important;
+  color: white !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.form-control {
+  width: 100% !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+}
+
+.btn {
+  padding: 10px 20px !important;
+  cursor: pointer !important;
+}
+
+.btn-success {
+  background-color: #28a745 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 4px !important;
+}
+
+.btn-success:hover {
+  background-color: #218838 !important;
+}
+
+.currenty {
+  margin-right: 5px !important;
+}
+
+.ttlText {
+  font-weight: bold !important;
+}
+
+@media screen and (max-width: 768px) {
+  .tfr thead,
+  .tfr tbody,
+  .tfr th,
+  .tfr td,
+  .tfr tr {
+    display: block !important;
+  }
+  .tfr thead tr {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+  .tfr tr {
+    border: 1px solid #ccc !important;
+  }
+  .tfr td {
+    border: none !important;
+    border-bottom: 1px solid #eee !important;
+    position: relative !important;
+    padding-left: 50% !important;
+    text-align: left !important;
+  }
+  .tfr td:before {
+    position: absolute !important;
+    top: 6px !important;
+    left: 6px !important;
+    width: 45% !important;
+    padding-right: 10px !important;
+    white-space: nowrap !important;
+  }
+  .tfr td:nth-of-type(1):before {
+    content: " اسم العنصر " !important;
+  }
+  .tfr td:nth-of-type(2):before {
+    content: "كمية" !important;
+  }
+  .tfr td:nth-of-type(3):before {
+    content: "معدل" !important;
+  }
+  .tfr td:nth-of-type(4):before {
+    content: " ضريبة(٪) " !important;
+  }
+  .tfr td:nth-of-type(5):before {
+    content: "ضريبة" !important;
+  }
+  .tfr td:nth-of-type(6):before {
+    content: "خصم" !important;
+  }
+  .tfr td:nth-of-type(7):before {
+    content: " الاجمالي ($) اجراء " !important;
+  }
+  /* Complete CSS styles */
+  .tfr td:nth-of-type(8):before {
+    content: "اجراء" !important;
+  }
+  .tfr td:nth-of-type(8) {
+    padding-left: 0 !important;
+  }
+  /* Hide Action column */
+  .tfr td:nth-of-type(8),
+  .tfr th:nth-of-type(8) {
+    display: none !important;
   }
 }
 
